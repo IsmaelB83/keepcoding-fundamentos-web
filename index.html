@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HBO - Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
+    <link rel='icon' href='/assets/img/keepcoding-32x32.png' sizes='32x32'>
+    <!-- Reset and initialization -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    <!-- Grid and responsiveness -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/grid.css'>
+    <!-- Layout of main pages -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <!-- Importnt Components -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/text.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/card.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
+    <!-- All the other shared styles -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
+</head>
+<body>
+    <div class='landing-page'>
+        <header class='header-login'>
+            <ahref='/index.html'><img class='logo' src='/assets/img/keepcoding.png' alt=''></a>
+        </header>
+        <main class='login'>
+            <div class='login-title'>
+                <h1 class='title'>Iniciar sesión</h1>
+            </div>
+            <div class='login-info'>
+                <div class='card'>
+                    <div class='card-header'>
+                        <img src='https://i2.wp.com/metro.co.uk/wp-content/uploads/2019/05/SEI_67615518.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1' alt=''>
+                    </div>
+                    <div class='card-body'>
+                        <h3 class='sub-title'>Bienvenido HBO España</h3>
+                        <ul class='features-list'>
+                            <li class='feature-tick'>
+                                <p>Primer mes gratis</p>
+                                <span>Después sólo 7,99€/mes.</span>
+                            </li>
+                            <li class='feature-tick'><p>Sin compromiso: cancela cuando quieras.</p></li>
+                            <li class='feature-tick'><p>2 reproducciones simultáneas.</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form action='/user/login' method='POST' class='login-form'>
+                <label class='label-sm' for='mail'>Correo electrónico</label>
+                <input type='mail' name='mail'>
+                <label class='label-sm' for='password'>Contraseña</label>
+                <input type='password' name='password'>
+                <input type='checkbox' name='recordar' id='recordar'>
+                <label for='recordar'>Recordar</label>
+                <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill mt-2 mb-2'>
+                <a class='anchor-main' href='/'>Olvidé mi contraseña</a>
+            </form>
+            <div class='login-create'>
+                <h3 class='sub-title'>¿No tienes una cuenta?</h3>
+                <button class='btn btn-outline btn--xl mt-2'>Crea tu cuenta</button>
+            </div>
+        </main>   
+        <footer class='footer-login'>
+            <p>Fullstack Bootcamp KeepCoding VII - <a class='anchor-main' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
+        </footer>
+    </div>
+</body>
+</html>

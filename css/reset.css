@@ -1,0 +1,16 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    /* Variables */
+    --main-blue: #00a3da;
+    --main-blue-hover: #007da7;
+    --main-light-grey: #a1a1a1;
+
+}

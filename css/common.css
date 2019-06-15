@@ -1,0 +1,55 @@
+/* Logo in web */
+.logo {
+    width: 50px;
+}
+
+/* */
+.anchor-main {
+    text-decoration: none;
+    color: var(--main-blue);
+    text-transform: uppercase;
+}
+
+.anchor-main:hover {
+    color: var(--main-blue-hover);
+    text-decoration: underline;
+}
+
+/* List of features */
+.features-list {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.65rem;
+    letter-spacing: .6px;
+    margin-top: 10px;
+}
+
+.feature-tick {
+    padding: 8px 0;
+    position: relative;
+}
+
+.feature-tick p {
+    padding-left: 35px;
+}
+
+.feature-tick span {
+    padding-left: 35px;
+    font-size: .9rem;
+    line-height: 1rem;
+    color: var(--main-light-grey);
+}
+
+.feature-tick::before {
+    display: inline-block;
+    content: '✓';
+    position: absolute;
+    top: 5px;
+    font-size: 2rem;
+    line-height: 2rem;
+    background: -webkit-linear-gradient(#eee, var(--main-blue-hover));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

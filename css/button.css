@@ -1,0 +1,42 @@
+/* Buttons */
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:focus { outline:0; }
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn--xl {
+    width: 250px;
+    font-size: 1.25rem;
+    padding: 10px 15px;
+}
+.btn--fill { width: 100%; }
+
+.btn-outline {
+    border-radius: 50px;
+    border: 2px solid white;
+    color: white;
+    transition: all .15s ease-in;
+}
+
+.btn-outline:hover {
+    border: 2px solid var(--main-blue);
+    background-color: var(--main-blue);
+}
+
+.btn-main {
+    border-radius: 3px;
+    border: 2px solid var(--main-blue);
+    background-color: var(--main-blue);
+    color: white;
+    transition: all .15s ease-in;
+}
+
+.btn-main:hover {
+    border: 2px solid var(--main-blue-hover);
+    background-color: var(--main-blue-hover);
+}
