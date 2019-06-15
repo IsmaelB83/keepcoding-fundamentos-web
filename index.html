@@ -48,15 +48,23 @@
                     </div>
                 </div>
             </div>
-            <form action='/user/login' method='POST' class='login-form'>
-                <label class='label-sm' for='mail'>Correo electrónico</label>
-                <input type='mail' name='mail'>
-                <label class='label-sm' for='password'>Contraseña</label>
-                <input type='password' name='password'>
-                <input type='checkbox' name='recordar' id='recordar'>
-                <label for='recordar'>Recordar</label>
-                <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill mt-2 mb-2'>
-                <a class='anchor-main' href='/'>Olvidé mi contraseña</a>
+            <form action='/' method='POST' class='login-form'>
+                <div class="form-group">
+                    <label for='mail' class='form-label form-label--light'>Correo electrónico</label>
+                    <input type='mail' name='mail' class='form-input form-input--block form-input--light'>
+                </div>
+                <div class="form-group">
+                    <label for='password' class='form-label form-label--light'>Contraseña</label>
+                    <input type='password' name='password' class='form-input form-input--block form-input--light'>
+                </div>
+                <div class="form-group mt-2">
+                    <input type='checkbox' name='recordar' id='recordar' class='form-checkbox'>
+                    <label for='recordar' class='form-label form-label--lg'>Recordar</label>
+                </div>
+                <div class="form-group text-center">
+                    <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill mt-2 mb-2'>
+                    <a class='anchor-main' href='/'>Olvidé mi contraseña</a>
+                </div>
             </form>
             <div class='login-create'>
                 <h3 class='sub-title'>¿No tienes una cuenta?</h3>
