@@ -1,3 +1,4 @@
+/* Background image with gradient */
 .background-gradient {
     background: 
     linear-gradient(
@@ -25,6 +26,7 @@
     background-size: cover;
 }
 
+/* Main wrappers */
 .login-wrapper {
     height: 100vh;
     display: flex;

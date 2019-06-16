@@ -16,7 +16,7 @@
 }
 
 /* List of features */
-.features-list {
+.features {
     list-style: none;
     font-size: 1.25rem;
     line-height: 1.65rem;
@@ -24,23 +24,23 @@
     margin-top: 10px;
 }
 
-.feature-tick {
+.features-tick {
     padding: 8px 0;
     position: relative;
 }
 
-.feature-tick p {
+.features-tick p {
     padding-left: 35px;
 }
 
-.feature-tick span {
+.features-tick span {
     padding-left: 35px;
     font-size: .9rem;
     line-height: 1rem;
     color: var(--main-light-grey);
 }
 
-.feature-tick::before {
+.features-tick::before {
     display: inline-block;
     content: '✓';
     position: absolute;
@@ -52,4 +52,3 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
