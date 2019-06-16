@@ -1,12 +1,17 @@
 .navbar {
     position: fixed;
+    width: inherit;
     height: 65px;
     background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px;
+    color: var(--main-white);
+    letter-spacing: .5px;
+    font-size: .8rem;
+    font-weight: 400;
 }
 
 .navbar-left, .navbar-right {
@@ -30,14 +35,18 @@
     margin-left: 15px;
 }
 
+.navbar-item--block {
+    display: block;   
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .navbar-item a {
-    text-transform: capitalize;
     color: var(--main-white);
     text-decoration: none;
-    letter-spacing: .5px;
-    font-size: .8rem;
-    transition: all .20s;
-    font-weight: 400;
+    transition: all .1s;
 }
 
 .navbar-item a:hover {
@@ -45,13 +54,12 @@
 }
 
 .navbar-search {
-    padding: 0 10px;
-    margin: 0;
+    cursor: pointer;
 }
 
-.navbar-searchInp {
+.navbar-search input {
     background-color: black;
-    border: 2px solid var(--main-white);
+    border: 1px solid var(--main-white);
     line-height: 1rem;
     padding: 4px;
     color: white;
@@ -63,11 +71,71 @@
     transition: all .5s;
 }
 
-.navbar-search:hover .navbar-searchInp,
-.navbar-search:active .navbar-searchInp,
-.navbar-search:focus .navbar-searchInp,
-.navbar-searchInp:focus, 
-.navbar-searchInp:hover {
+.navbar-search:hover input,
+.navbar-search:active input,
+.navbar-search:focus input,
+.navbar-search:focus input, 
+.navbar-search:focus input {
     transform: scaleX(1);
     width: 200px;
+}
+
+/* User account */
+.account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.account:hover { 
+    transition-delay: 0s;
+}
+
+.account-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.account-name {
+    margin-right: 5px;
+}
+
+.account:hover > .account-options {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.account-options {
+    cursor: auto;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    padding: 10px 30px 10px 15px;
+    background-color: black;
+    border: 1px solid var(--main-dark-grey);
+    transform-origin: 100% 0;
+    transform: scaleY(0);
+    opacity: 0;
+    margin-top: 10px;
+    transition: all .1s ease-out;
+    transition-delay: .05s; }
+
+.account-options .separator {
+    border-top: 1px solid var(--main-dark-grey);
+    margin: 10px -30px 10px -15px;
+}
+
+.account-options .navbar-item {
+    margin-top: 7px;
+}
+
+.account-caret {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    font-size: 1rem;
+    color: var(---main-white);
 }

@@ -11,3 +11,7 @@
     font-weight: 400;
     letter-spacing: .75px;
 }
+
+.text-white {
+    color: var(--main-light-grey);
+}

@@ -1,27 +1,44 @@
-.landing-page {
-    height: 100vh;
+.background-gradient {
     background: 
-        linear-gradient(
-            rgba(0,0,0,0),
-            rgba(0,0,0,.5) 25%,
-            rgba(0,0,0,.75) 50%
-        ),
-        url('/assets/img/landing_hero.jpg');
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,.3) 35%,
+        rgba(0,0,0,.5) 60%,
+        rgba(0,0,0,1) 80%
+    ),
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,.5) 80%,
+        rgba(0,0,0,1) 85%
+    ),
+    linear-gradient(
+        to left,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,.5) 80%,
+        rgba(0,0,0,1) 85%
+    ),
+    url('/assets/img/landing_hero.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.login-wrapper {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 50px;
+    padding: 25px;
 }
 
-.header-login {
-    width: 100%;
-    text-align: left;
-}
-
-.footer-login {
-    width: 100%;
-    text-align: left;
-    color: var(--main-light-grey);
+.main-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 25px;
 }
 
 /* Layout del panel de login */
