@@ -1,0 +1,73 @@
+.navbar {
+    position: fixed;
+    height: 65px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.navbar-left, .navbar-right {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+.navbar-list {
+    list-style: none;
+    display: inline;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navbar-item a {
+    text-transform: capitalize;
+    color: var(--main-white);
+    text-decoration: none;
+    letter-spacing: .5px;
+    font-size: .8rem;
+    transition: all .20s;
+    font-weight: 400;
+}
+
+.navbar-item a:hover {
+    color: var(--main-light-grey);
+}
+
+.navbar-search {
+    padding: 0 10px;
+    margin: 0;
+}
+
+.navbar-searchInp {
+    background-color: black;
+    border: 2px solid var(--main-white);
+    line-height: 1rem;
+    padding: 4px;
+    color: white;
+    display: inline-block;
+    transform: scaleX(0);
+    width: 0;
+    margin: 0;
+    margin-left: 5px;
+    transition: all .5s;
+}
+
+.navbar-search:hover .navbar-searchInp,
+.navbar-search:active .navbar-searchInp,
+.navbar-search:focus .navbar-searchInp,
+.navbar-searchInp:focus, 
+.navbar-searchInp:hover {
+    transform: scaleX(1);
+    width: 200px;
+}
