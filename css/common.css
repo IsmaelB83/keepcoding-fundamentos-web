@@ -4,13 +4,13 @@
 }
 
 /* Enlaces */
-.anchor-main {
+.link {
     text-decoration: none;
     color: var(--main-blue);
     text-transform: uppercase;
 }
 
-.anchor-main:hover {
+.link:hover {
     color: var(--main-blue-hover);
     text-decoration: underline;
 }

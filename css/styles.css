@@ -23,3 +23,45 @@
     text-align: left;
     color: var(--main-light-grey);
 }
+
+/* Layout del panel de login */
+.login {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 400px 400px 1fr;
+    grid-gap: 40px;
+    color: white;
+    align-items: start;
+}
+
+.login-title {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+    text-align: center;
+    align-self: center;
+}
+
+.login-info {
+    grid-row: 2;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    grid-row: 2;
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+.login-create {
+    grid-row: 3;    
+    grid-column: 1 / span 4;
+    text-align: center;
+    align-self: flex-start;
+}
