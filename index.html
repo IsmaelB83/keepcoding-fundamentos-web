@@ -32,7 +32,7 @@
             </div>
             <div class='login-info'>
                 <div class='card'>
-                    <div class='card-header'>
+                    <div class='card-header card-header--landscape'>
                         <img src='https://i2.wp.com/metro.co.uk/wp-content/uploads/2019/05/SEI_67615518.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1' alt=''>
                     </div>
                     <div class='card-body'>
@@ -51,18 +51,19 @@
             <form action='/' method='POST' class='login-form'>
                 <div class="form-group">
                     <label for='mail' class='form-label form-label--light'>Correo electrónico</label>
-                    <input type='mail' name='mail' class='form-input form-input--block form-input--light'>
+                    <input type='email' name='mail' required placeholder='' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' class='form-input form-input--block form-input--light'>
+                    <label for='mail' class='form-label form-label--help'>Email incorrecto. Revise el formato (xxx@yyy.zzz)</label>
                 </div>
                 <div class="form-group">
                     <label for='password' class='form-label form-label--light'>Contraseña</label>
-                    <input type='password' name='password' class='form-input form-input--block form-input--light'>
+                    <input type='password' name='password' required placeholder=' ' class='form-input form-input--block form-input--light'>
                 </div>
-                <div class="form-group mt-2">
+                <div class="form-group my-2">
                     <input type='checkbox' name='recordar' id='recordar' class='form-checkbox'>
                     <label for='recordar' class='form-label form-label--lg'>Recordar</label>
                 </div>
                 <div class="form-group text-center">
-                    <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill mt-2 mb-2'>
+                    <input type='submit' value='Iniciar sesión' class='btn btn-main btn--xl btn--fill my-2'>
                     <a class='anchor-main' href='/'>Olvidé mi contraseña</a>
                 </div>
             </form>

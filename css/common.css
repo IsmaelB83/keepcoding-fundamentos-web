@@ -3,7 +3,7 @@
     width: 50px;
 }
 
-/* */
+/* Enlaces */
 .anchor-main {
     text-decoration: none;
     color: var(--main-blue);
@@ -47,7 +47,7 @@
     top: 5px;
     font-size: 2rem;
     line-height: 2rem;
-    background: -webkit-linear-gradient(#eee, var(--main-blue-hover));
+    background: -webkit-linear-gradient(var(--main-white), var(--main-blue-hover));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

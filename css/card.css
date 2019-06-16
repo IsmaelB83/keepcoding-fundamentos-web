@@ -1,3 +1,4 @@
+/* Componentes tipo tarjeta */
 .card {
     display: flex;
     flex-direction: column;
@@ -6,9 +7,9 @@
     overflow: hidden;
 }
 
+/* Elementos de una tarjeta */
 .card-header {
     overflow: hidden;
-    height: 175px;
 }
 
 .card-header img {
@@ -23,3 +24,7 @@
     background-color: #222;
 }
 
+/* Modificadoes de una tarjetas */
+.card-header--landscape {
+    height: 175px;
+}

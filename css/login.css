@@ -40,12 +40,18 @@
     align-self: flex-start;
 }
 
-/* Formulario */
+/*************************
+ * Formulario y elemento *
+ *************************/
+
+ /* Bloque de elementos de formulario */
 .form-group {
     width: 100%;
     padding: 5px 0;
+    position: relative;
 }
 
+/* Elementos input */
 .form-input {
     border: none;
     border-radius: 2px;
@@ -59,11 +65,27 @@
     width: 100%;
 }
 
+/* :not(:placeholder-shown -> hack para controlar que el input NO esté vacio (para hacer el aviso más amigable con el usuario)
+   Sólo se muestra el aviso cuando el input NO está vacio, y además NO tiene el foco. Este control se podría mejorar con Javascript
+*/
+.form-input:not(:placeholder-shown).form-input:invalid.form-input:not(:focus) {
+    color: var(--main-red);
+    border: 1px solid var(--main-red);
+}
+
+/* Idem que lo anterior, pero además muestro el pseudoelemento after de label de ayuda. Que coloca un signo de exclamación en el propio
+   input mediante posicionamiento absoluto */
+.form-input:not(:placeholder-shown).form-input:invalid.form-input:not(:focus) ~ .form-label--help {
+    display: block;
+}
+
 .form-input--light {
     background-color: var(--main-light-grey);
     color: black;
+    border: none;
 }
 
+/* Elementos label */
 .form-label {
     align-self: flex-start;
     font-size: .75rem;
@@ -80,17 +102,37 @@
     color: var(--main-light-grey);
 }
 
-.form-checkbox {
+.form-label--help {
+    text-align: right;
+    color: var(--main-red);
+    margin-top: 1px;
+    display: none;
+    text-transform: none;
+    position: relative;
+}
+
+.form-label--help::after {
+    display: block;
+    content: '❗';
+    position: absolute;
+    font-size: 1.25rem;
+    top: -35px;
+    right: 10px;
+    color: var(--main-red);
+}
+
+/* Checkbox/Radiobutton hack */
+.form-checkbox, .form-radio {
     display: none;
 }
 
-.form-checkbox+label {
+.form-checkbox+label, .form-radio+label {
     padding-left: 30px;
     position: relative;
     cursor: pointer;
 }
 
-.form-checkbox+label:before {
+.form-checkbox+label:before, .form-radio+label:before {
     display: block;
     content: '';
     width: 20px;
@@ -103,11 +145,10 @@
     border-radius: 2px;
     color: white;
     transition: all .35s ease;
-    
 }
 
-.form-checkbox:checked+label:before {
+.form-checkbox:checked+label:before, .form-radio:checked+label:before {
     background-color: var(--main-blue);
-    content: "✓";
+    content: '✓';
     font-size: 1.5rem;
 }

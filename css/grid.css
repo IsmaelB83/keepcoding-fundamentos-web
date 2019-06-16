@@ -114,5 +114,11 @@
 .mr-3 { margin-right: 20px; }
 .mr-4 { margin-right: 30px; }
 
+.my-0 { margin-top: 5px; margin-bottom: 5px; }
+.my-1 { margin-top: 10px; margin-bottom: 10px; }
+.my-2 { margin-top: 15px; margin-bottom: 15px; }
+.my-3 { margin-top: 20px; margin-bottom: 20px; }
+.my-4 { margin-top: 30px; margin-bottom: 30px; }
+
 /* Otros */
 .text-center { text-align: center !important; }
