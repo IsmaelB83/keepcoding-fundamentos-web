@@ -14,7 +14,7 @@ utilizando HTML y CSS.
 ### Checkbox hack (login.html)
 > He creado un checkbox, rediseñando por completo el estándar de HTML. Tiene un efecto de transición del color de fondo cuando lo pulsas.
 ### Input de tipo mail con validación (login.html)
-Se añade interactividad con el usuario, mostrando avisos de error que aparecen cuando se detecta que el contenido del input es incorrecto.
+> Se añade interactividad con el usuario, mostrando avisos de error que aparecen cuando se detecta que el contenido del input es incorrecto.
 ### Campo de búsqueda dinámico (index.html)
 > Se despliega el campo de búsqueda cuando hacemos foco/click sobre el botón de búsqueda.
 ### Dropdown de cuenta de usuario (index.html y detail.html) 
