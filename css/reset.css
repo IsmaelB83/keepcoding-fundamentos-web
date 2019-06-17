@@ -16,5 +16,10 @@
     --main-grey: #979797;
     --main-red: #ff4136;
     --main-white: #fafafa;
+    /* Tamaños */
+    --navbar-height: 65px;
+}
 
+body {
+    background-color: black;
 }

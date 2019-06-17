@@ -36,11 +36,12 @@
 }
 
 .main-wrapper {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 25px;
+    padding-top: var(--navbar-height);
+    color: var(--main-white);
 }
 
 /* Layout del panel de login */
@@ -83,4 +84,44 @@
     grid-column: 1 / span 4;
     text-align: center;
     align-self: flex-start;
+}
+
+/* Hero wrapper */
+.hero {
+    width: 100%; 
+    height: 50%;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,.5);
+}
+
+.hero video {
+    width: 100%;
+    object-fit: cover;
+    margin-top: -100px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    padding-left: 60px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-buttons button, .hero-options button {
+    margin-right: 15px;
 }

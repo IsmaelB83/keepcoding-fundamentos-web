@@ -25,63 +25,83 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
 </head>
 <body>
-    <div class='main-wrapper background-gradient'>
-        <header class='container'>
-            <nav class='navbar'>
-                <div class='navbar-left'>
-                    <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
-                    <ul class='navbar-list'>
-                        <li class='navbar-item'><a href='/'>Películas</a></li>
-                        <li class='navbar-item'><a href='/'>Series</a></li>
-                        <li class='navbar-item'><a href='/'>Documentales</a></li>
-                        <li class='navbar-item'><a href='/'>Favoritos</a></li>
-                    </ul>
+    <header class='container'>
+        <nav class='navbar'>
+            <div class='navbar-left'>
+                <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
+                <ul class='navbar-list'>
+                    <li class='navbar-item'><a href='/'>Películas</a></li>
+                    <li class='navbar-item'><a href='/'>Series</a></li>
+                    <li class='navbar-item'><a href='/'>Documentales</a></li>
+                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                </ul>
+            </div>
+            <div class='navbar-right'>
+                <div id='search' class='navbar-search'>
+                    <button class='btn'><i class='fas fa-search btn--white'></i></button>
+                    <input type='text' autofocus class='navbar-searchInp mr-2' placeholder='Título, protagonistas, ejemplo'>
                 </div>
-                <div class='navbar-right'>
-                    <div id='search' class='navbar-search'>
-                        <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                        <input type='text' autofocus class='navbar-searchInp' placeholder='Título, protagonistas, ejemplo'>
-                    </div>
-                    <div id ='account' class='account ml-1'>
-                        <img class='account-img' src='/assets/img/account_isma.png' alt='account'>
-                        <i class='fas fa-caret-down'></i>
-                        <div class='account-options'>
-                                <div class='account-caret'>
-                                    <i class='fas fa-caret-up'></i>
-                                </div>
-                                <ul class='navbar-list'>
-                                    <li class='navbar-item navbar-item--block'>
-                                        <span>Cambiar de perfil</span>
-                                    </li>
-                                    <li class='navbar-item navbar-item--block'>
-                                        <img class='account-img' src='/assets/img/account_tam.png' alt='account'>
-                                        <a href='/'>Tam</a>
-                                    </li>
-                                    <li class='navbar-item navbar-item--block'>
-                                        <img class='account-img' src='/assets/img/account_livi.png' alt='account'>
-                                        <a href='/'>Livi</a>
-                                    </li>
-                                    <li class='separator'></li>
-                                    <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
-                                    <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
-                                    <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
-                                </ul>
+                <button class='btn'><i class='fas fa-bell btn--white'></i></button>
+                <div id ='account' class='account ml-1'>
+                    <img class='account-img' src='/assets/img/account_isma.png' alt='account'>
+                    <i class='fas fa-caret-down'></i>
+                    <div class='account-options'>
+                        <div class='account-caret'>
+                            <i class='fas fa-caret-up'></i>
                         </div>
+                        <ul class='navbar-list'>
+                            <li class='navbar-item navbar-item--block'>
+                                <span>Cambiar de perfil</span>
+                            </li>
+                            <li class='navbar-item navbar-item--block'>
+                                <img class='account-img' src='/assets/img/account_tam.png' alt='account'>
+                                <a href='/'>Tam</a>
+                            </li>
+                            <li class='navbar-item navbar-item--block'>
+                                <img class='account-img' src='/assets/img/account_livi.png' alt='account'>
+                                <a href='/'>Livi</a>
+                            </li>
+                            <li class='separator'></li>
+                            <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
+                            <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
+                            <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <main class='container'>
-            <div class='row'>
             </div>
-        </main>
-        <footer class='container'>
-            <div class='row'>
-                <div class='col-12 text-center'>
-                    <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
-                </div>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="filter"></div>
+        <video loop id="trailer" poster='/assets/img/minis/hero.jpg'>
+            <source src="/assets/video/trailer.mp4" type="video/mp4">
+        </video>
+        <div class="container hero-content">
+            <img src="/assets/img/minis/hero-title.png" alt="">
+            <div class="hero-buttons mt-3">
+                <button class='btn btn-outline btn--lg btn--zoom'><i class='fas fa-play'></i>Reproducir</button>
+                <button class='btn btn-outline btn--lg btn--zoom'><i class='fas fa-list'></i>Añadir a mi lista</button>
+                <button class='btn btn-outline btn--lg btn--zoom'><i class='far fa-folder'></i>Más infomación</button>
             </div>
-        </footer>
+        </div>
     </div>
+    <main class='container main-wrapper'>
+        <div class='row'>
+        </div>
+    </main>
+    <footer class='container'>
+        <div class='row'>
+            <div class='col-12 text-center'>
+                <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
+            </div>
+        </div>
+    </footer>
+   
+    <script>
+        setTimeout(function(){
+            document.getElementById("trailer").play();
+        }, 1500);
+    </script>
+
 </body>
 </html>
