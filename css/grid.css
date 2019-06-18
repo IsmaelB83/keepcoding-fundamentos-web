@@ -22,6 +22,7 @@
 .col-2  { width: calc(100% / 12 * 2); }
 .col-1  { width: calc(100% / 12); }
 .d-none { display: none !important; }
+.d-hidden { visibility: hidden !important; }
 .d-block { display: block !important; }
 
 /* Responsive columns*/

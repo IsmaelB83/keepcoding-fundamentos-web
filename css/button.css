@@ -16,6 +16,8 @@
 .btn:active { transform: translateY(0); }
 
 /* Tipos de botones */
+
+/*1) OUTLINE */
 .btn-outline {
     border-radius: 50px;
     border: 2px solid var(--main-white);
@@ -27,6 +29,7 @@
     background-color: var(--main-blue);
 }
 
+/*2) MAIN (blue) */
 .btn-main {
     border-radius: 4px;
     border: 2px solid var(--main-blue);
@@ -39,6 +42,24 @@
     background-color: var(--main-blue-hover);
 }
 
+/*3) TRAILER */
+.btn-trailer {
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, .3);
+    text-transform: none;
+    color: var(--main-white);
+    font-weight: 300;
+    font-size: 1rem !important;
+}
+
+.btn-trailer:hover {
+    background-color: var(--main-white);
+    color: black;
+    transform: scale(1.1,1.05) translateY(-1px);
+
+}
+
 /* Modificadores a los botones */
 .btn--xl {
     width: 250px;
@@ -49,11 +70,6 @@
 .btn--lg {
     font-size: 1.1rem;
     padding: 10px 15px;
-}
-
-.btn--zoom:hover {
-    transform: scale(1.1,1.05);
-    line-height: calc(line-height + .1);
 }
 
 .btn--fill { width: 100%; }
