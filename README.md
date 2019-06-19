@@ -20,7 +20,9 @@ utilizando HTML y CSS.
 > Se despliega el campo de búsqueda cuando hacemos foco/click sobre el botón de búsqueda.
 ### Dropdown de cuenta de usuario (index.html y detail.html) 
 > En la página de index.html y detail.html he creado un menú tipo dropdown únicamente utiliando css, selectores combinados y la pseudoclase hover.
-### Cards giratorias (index.html - pending)
+### Cards giratorias al hacer hover sobre ellas (index.html)
 > Tarjetas tipo giratorias en las listas de series y películas disponibles
+### Cards con efecto slide up al hacer hover sobre ellas (index.html)
+> Tarjetas del tipo "cortinilla" en las que al hacer hover sobre ellas, se muestra información adicional con una capa superpuesta que sube hasta posicionarse sobre la tarjeta
 ### Reproductor multimedia mejorado (index.html y detail.html - pending )
 > He creado un reproductor multimedia mejorado para previsualizar el trailer de una serie o películas
