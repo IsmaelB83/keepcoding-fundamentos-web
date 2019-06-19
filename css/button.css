@@ -7,10 +7,6 @@
     transition: all .15s ease;
 }
 
-.btn i {
-    margin-right: 10px;
-}
-
 .btn:focus { outline:0; }
 .btn:hover  { transform: translateY(-1px); }
 .btn:active { transform: translateY(0); }
@@ -70,6 +66,11 @@
 .btn--lg {
     font-size: 1.1rem;
     padding: 10px 15px;
+}
+
+.btn--sm {
+    font-size: .9rem;
+    padding: 8px 8px;
 }
 
 .btn--fill { width: 100%; }
