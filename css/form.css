@@ -1,15 +1,11 @@
-/*************************
- * Formulario y elemento *
- *************************/
-
- /* Bloque de elementos de formulario */
+ /* Form group is a container of inputs, labels, etc. */
 .form-group {
     width: 100%;
     padding: 5px 0;
     position: relative;
 }
 
-/* Elementos input */
+/* Input */
 .input {
     border: none;
     border-radius: 2px;
@@ -23,7 +19,7 @@
     width: 100%;
 }
 
-/* :not(:placeholder-shown -> hack para controlar que el input NO esté vacio (para hacer el aviso más amigable con el usuario)
+/* :not(:placeholder-shown) -> hack para controlar que el input NO esté vacio (para hacer el aviso más amigable con el usuario)
    Sólo se muestra el aviso cuando el input NO está vacio, y además NO tiene el foco. Este control se podría mejorar con Javascript
 */
 .input:not(:placeholder-shown).input:invalid.input:not(:focus) {
@@ -43,7 +39,7 @@
     border: none;
 }
 
-/* Elementos label */
+/* Label */
 .label {
     align-self: flex-start;
     font-size: .75rem;
@@ -79,7 +75,7 @@
     color: var(--main-red);
 }
 
-/* Checkbox/Radiobutton hack */
+/* Checkbox & Radiobutton */
 .form-checkbox, .form-radio {
     display: none;
 }

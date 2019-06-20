@@ -3,34 +3,30 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>HBO - Login</title>
+    <title>Crossbox - Login</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
     <link rel='stylesheet' type='text/css' href='/css/fontawesome/css/all.css'>
     <link rel='icon' href='/assets/img/keepcoding-32x32.png' sizes='32x32'>
-    <!-- Reset and initialization -->
+    <!-- Styles -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
-    <!-- Grid and responsiveness -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/grid.css'>
-    <!-- Layout of main pages -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    <!-- Importnt Components -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/text.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/form.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/card.css'>   
+    <link rel='stylesheet' type='text/css' media='screen' href='css/cards.css'>   
     <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
-    <!-- All the other shared styles -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
 </head>
 <body>
+    <!-- Header with navbar -->
     <header class='container'>
         <nav class='navbar'>
             <div class='navbar-left'>
                 <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
                 <ul class='navbar-list'>
+                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
                     <li class='navbar-item'><a href='/'>Películas</a></li>
                     <li class='navbar-item'><a href='/'>Series</a></li>
                     <li class='navbar-item'><a href='/'>Documentales</a></li>
@@ -38,16 +34,16 @@
                 </ul>
             </div>
             <div class='navbar-right'>
-                <div id='search' class='navbar-search'>
+                <div class='navbar-toolbar'>
                     <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                    <input type='text' autofocus class='navbar-searchInp mr-2' placeholder='Título, protagonistas, ejemplo'>
+                    <input type='text' placeholder='Título, protagonistas, ejemplo'>
+                    <button class='btn'><i class='fas fa-bell btn--white'></i></button>
                 </div>
-                <button class='btn'><i class='fas fa-bell btn--white'></i></button>
-                <div id ='account' class='account ml-1'>
-                    <img class='account-img' src='/assets/img/account_isma.png' alt='account'>
+                <div id ='account' class='navbar-account ml-1'>
+                    <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
                     <i class='fas fa-caret-down'></i>
-                    <div class='account-options'>
-                        <div class='account-caret'>
+                    <div class='navbar-account-options'>
+                        <div class='navbar-account-caret'>
                             <i class='fas fa-caret-up'></i>
                         </div>
                         <ul class='navbar-list'>
@@ -55,11 +51,11 @@
                                 <span>Cambiar de perfil</span>
                             </li>
                             <li class='navbar-item navbar-item--block'>
-                                <img class='account-img' src='/assets/img/account_tam.png' alt='account'>
+                                <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
                                 <a href='/'>Tam</a>
                             </li>
                             <li class='navbar-item navbar-item--block'>
-                                <img class='account-img' src='/assets/img/account_livi.png' alt='account'>
+                                <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
                                 <a href='/'>Livi</a>
                             </li>
                             <li class='separator'></li>
@@ -72,9 +68,10 @@
             </div>
         </nav>
     </header>
+    <!-- Trailer hero panel (new premiere) -->
     <div class='hero'>
-        <div class='video-wrapper'>
-            <video autoplay id='trailer'>
+        <div class='hero-wrapper'>
+            <video autoplay muted id='trailer'>
                 <source src='/assets/video/trailer.mp4' type='video/mp4'>
             </video>
         </div>
@@ -92,547 +89,550 @@
             </div>
         </div>
     </div>
+    <!-- Main panel with lists -->
     <main class='container main-wrapper'>
-        <div class='row'>
-            <div class='content mt-3'>
-                <h2 class='content-title'>Seguir viendo</h2>
-                <div class='content-list'>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/fittest.jpeg' alt=''>
-                            <div class='mini-content'>
-                                <h3>The fittest on earth</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Estreno!</span>
-                                    <span class='mini-age d-hidden'></span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='40' max='100'></progress>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+        <section id="mylist" class='row movies mt-3'>
+            <h2 class='movies-title'>Seguir viendo</h2>
+            <div class='movies-list'>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/fittest.jpeg' alt=''>
+                        <div class='movie-content'>
                             <h3>The fittest on earth</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Estreno!</span>
+                                <span class='movie-age d-hidden'></span>
                             </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm mr-1'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+                        </div>
+                        <progress class='movie-progress' value='40' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>The fittest on earth</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/alcasser.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Alcasser</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Estreno!</span>
-                                    <span class='mini-age'>+16</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='5' max='100'></progress>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/alcasser.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Alcasser</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Estreno!</span>
+                                <span class='movie-age'>+16</span>
                             </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+                        </div>
+                        <progress class='movie-progress' value='5' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Alcasser</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Chernobyl</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert d-hidden'></span>
-                                    <span class='mini-age'>+13</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='64' max='100'></progress>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Chernobyl</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert d-hidden'></span>
+                                <span class='movie-age'>+13</span>
                             </div>
+                        </div>
+                        <progress class='movie-progress' value='64' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Chernobyl</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/froming.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Rich Froming</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert d-hidden'></span>
-                                    <span class='mini-age d-hidden'></span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='95' max='100'></progress>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/froming.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Rich Froming</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert d-hidden'></span>
+                                <span class='movie-age d-hidden'></span>
                             </div>
+                        </div>
+                        <progress class='movie-progress' value='95' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Rich Froming</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/got.jpeg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Game of Thrones</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Last season</span>
-                                    <span class='mini-age'>+9</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='12' max='100'></progress>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/got.jpeg' alt=''>
+                        <div class='movie-content'>
                             <h3>Game of Thrones</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>      
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Last season</span>
+                                <span class='movie-age'>+9</span>
                             </div>
                         </div>
-                    </div>    
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/redeemed.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Redeemed and the dominant</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Novedad</span>
-                                    <span class='mini-age d-hidden'></span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='63' max='100'></progress>
+                        <progress class='movie-progress' value='12' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Game of Thrones</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>      
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article>    
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/redeemed.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Redeemed and the dominant</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>      
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Novedad</span>
+                                <span class='movie-age d-hidden'></span>
                             </div>
                         </div>
-                    </div>    
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/blackm.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Black Mirror</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Temporada 5</span>
-                                    <span class='mini-age'>+16</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='75' max='100'></progress>
+                        <progress class='movie-progress' value='63' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Redeemed and the dominant</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>      
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article>    
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/blackm.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Black Mirror</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>      
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Temporada 5</span>
+                                <span class='movie-age'>+16</span>
                             </div>
                         </div>
-                    </div>    
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/stranger.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Stranger Things</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Temporada 3</span>
-                                    <span class='mini-age'>+13</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='5' max='100'></progress>
+                        <progress class='movie-progress' value='75' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Black Mirror</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>      
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article>    
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/stranger.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Stranger Things</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>       
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Temporada 3</span>
+                                <span class='movie-age'>+13</span>
                             </div>
                         </div>
-                    </div> 
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/dark.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Dark</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Temporada 2</span>
-                                    <span class='mini-age'>+13</span>
-                                </div>
-                            </div>
-                            <progress class='mini-progress' value='52' max='100'></progress>
+                        <progress class='movie-progress' value='5' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Stranger Things</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>       
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article> 
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/dark.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Dark</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>       
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Temporada 2</span>
+                                <span class='movie-age'>+13</span>
                             </div>
                         </div>
-                    </div>    
-                </div>
+                        <progress class='movie-progress' value='52' max='100'></progress>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Dark</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>       
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-        <div class='row mt-4'>
-            <div class='content mt-3'>
-                <h2 class='content-title'>Originales Netflix</h2>
-                <div class='content-list content-list--lg'>
-                    <div class='mini mini-lg'>
-                        <img class='mini-caption' src='/assets/img/minis/stranger.jpg' alt=''>
-                        <div class='mini-slide mini-slide--up'>
-                            <h3>The fittest on earth</h3>
-                            <div class='mini-tags'>
-                                <span class='mini-alert'>Estreno!</span>
-                                <span class='mini-age d-hidden'></span>
-                            </div>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm mr-1'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+        </section>
+        <section id="originals" class='row movies mt-4'>
+            <h2 class='movies-title'>Originales Netflix</h2>
+            <div class='movies-list movies-list--lg'>
+                <article class='movie movie-lg'>
+                    <img class='movie-caption' src='/assets/img/minis/stranger.jpg' alt=''>
+                    <div class='movie-content'>
+                        <h3>The fittest on earth</h3>
+                        <div class='movie-tags'>
+                            <span class='movie-alert'>Estreno!</span>
+                            <span class='movie-age'>TP</span>
                         </div>
                     </div>
-                    <div class='mini mini-lg'>
-                        <img class='mini-caption' src='/assets/img/minis/got.jpeg' alt=''>
-                        <div class='mini-slide mini-slide--up'>
-                            <h3>Alcasser</h3>
-                            <div class='mini-tags'>
-                                <span class='mini-alert'>Estreno!</span>
-                                <span class='mini-age'>+16</span>
-                            </div>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+                    <div class='movie-slide'>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini mini-lg'>
-                        <img class='mini-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
-                        <div class='mini-slide mini-slide--up'>
-                            <h3>Chernobyl</h3>
-                            <div class='mini-tags'>
-                                <span class='mini-alert d-hidden'></span>
-                                <span class='mini-age'>+13</span>
-                            </div>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+                </article>
+                <article class='movie movie-lg'>
+                    <img class='movie-caption' src='/assets/img/minis/got.jpeg' alt=''>
+                    <div class='movie-content'>
+                        <h3>The fittest on earth</h3>
+                        <div class='movie-tags'>
+                            <span class='movie-alert'>Estreno!</span>
+                            <span class='movie-age'>TP</span>
+                        </div>
+                    </div>   
+                    <div class='movie-slide'>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                    <div class='mini mini-lg'>
-                        <img class='mini-caption' src='/assets/img/minis/froming.jpg' alt=''>
-                        <div class='mini-slide mini-slide--up'>
-                            <h3>Rich Froming</h3>
-                            <div class='mini-tags'>
-                                <span class='mini-alert d-hidden'></span>
-                                <span class='mini-age d-hidden'></span>
-                            </div>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                            </div>
+                </article>
+                <article class='movie movie-lg'>
+                    <img class='movie-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
+                    <div class='movie-content'>
+                        <h3>The fittest on earth</h3>
+                        <div class='movie-tags'>
+                            <span class='movie-alert'>Estreno!</span>
+                            <span class='movie-age'>TP</span>
+                        </div>
+                    </div>       
+                    <div class='movie-slide'>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
-                 </div>
+                </article>
+                <article class='movie movie-lg'>
+                    <img class='movie-caption' src='/assets/img/minis/froming.jpg' alt=''>
+                    <div class='movie-content'>
+                        <h3>The fittest on earth</h3>
+                        <div class='movie-tags'>
+                            <span class='movie-alert'>Estreno!</span>
+                            <span class='movie-age'>TP</span>
+                        </div>
+                    </div>   
+                    <div class='movie-slide'>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-        <div class='row mt-4'>
-            <div class='content mt-3'>
-                <h2 class='content-title'>Marvel</h2>
-                <div class='content-list'>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/avengersinfinity.jpeg' alt=''>
-                            <div class='mini-content'>
-                                <h3>The fittest on earth</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Estreno!</span>
-                                    <span class='mini-age d-hidden'></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='mini-side mini-side--back'>
+        </section>
+        <section id="sports" class='row movies mt-4'>
+            <h2 class='movies-title'>Marvel</h2>
+            <div class='movies-list'>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/avengersinfinity.jpeg' alt=''>
+                        <div class='movie-content'>
                             <h3>The fittest on earth</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm mr-1'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Estreno!</span>
+                                <span class='movie-age d-hidden'></span>
                             </div>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/avengersendgame.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Alcasser</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Estreno!</span>
-                                    <span class='mini-age'>+16</span>
-                                </div>
-                            </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>The fittest on earth</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm mr-1'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                        </div>
+                    </div>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/avengersendgame.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Alcasser</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Estreno!</span>
+                                <span class='movie-age'>+16</span>
                             </div>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Chernobyl</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert d-hidden'></span>
-                                    <span class='mini-age'>+13</span>
-                                </div>
-                            </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Alcasser</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                        </div>
+                    </div>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/chernobyl.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Chernobyl</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert d-hidden'></span>
+                                <span class='movie-age'>+13</span>
                             </div>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/froming.jpg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Rich Froming</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert d-hidden'></span>
-                                    <span class='mini-age d-hidden'></span>
-                                </div>
-                            </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Chernobyl</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/froming.jpg' alt=''>
+                        <div class='movie-content'>
                             <h3>Rich Froming</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>   
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert d-hidden'></span>
+                                <span class='movie-age d-hidden'></span>
                             </div>
                         </div>
                     </div>
-                    <div class='mini'>
-                        <div class='mini-side mini-side--front'>
-                            <img class='mini-caption' src='/assets/img/minis/got.jpeg' alt=''>
-                            <div class='mini-content'>
-                                <h3>Game of Thrones</h3>
-                                <div class='mini-tags'>
-                                    <span class='mini-alert'>Last season</span>
-                                    <span class='mini-age'>+9</span>
-                                </div>
-                            </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Rich Froming</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>   
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                        <div class='mini-side mini-side--back'>
+                    </div>
+                </article>
+                <article class='movie'>
+                    <div class='movie-side movie-side--front'>
+                        <img class='movie-caption' src='/assets/img/minis/got.jpeg' alt=''>
+                        <div class='movie-content'>
                             <h3>Game of Thrones</h3>
-                            <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>      
-                            <p><span>Año</span>: 2019</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='movie-tags'>
+                                <span class='movie-alert'>Last season</span>
+                                <span class='movie-age'>+9</span>
                             </div>
                         </div>
-                    </div>    
-                </div>
+                    </div>
+                    <div class='movie-side movie-side--back'>
+                        <h3>Game of Thrones</h3>
+                        <div class='rating'>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>      
+                        <p><span>Año</span>: 2019</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class="buttons">
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                        </div>
+                    </div>
+                </article>    
             </div>
-        </div>
+        </section>
     </main>
+    <!-- Footer with social media icons -->
     <footer class='container'>
         <div class='row'>
             <div class='col-12 text-center'>
                 <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
             </div>
         </div>
-    </footer>
-       
+    </footer>      
 </body>
 </html>

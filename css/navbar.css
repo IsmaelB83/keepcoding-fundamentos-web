@@ -1,3 +1,4 @@
+/* Navigation bar */
 .navbar {
     position: fixed;
     width: inherit;
@@ -15,25 +16,39 @@
     z-index: 10;
 }
 
+/* Left and Right blocks of navigation bar */
 .navbar-left, .navbar-right {
-    display: inline-block;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
+.navbar-right  i {
+    font-size: 1.2rem;
+    letter-spacing: normal;
+}
+
+/* Logo */
 .navbar-brand {
     height: 100%;
 }
 
+/* List of navbar-items */
 .navbar-list {
     list-style: none;
     display: inline;
 }
 
+/* Navbar items */
 .navbar-item {
     display: inline-block;
     margin-left: 15px;
+}
+
+.navbar-item--active {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .navbar-item--block {
@@ -47,6 +62,7 @@
 .navbar-item a {
     color: var(--main-white);
     text-decoration: none;
+    position: relative;
     transition: all .1s;
 }
 
@@ -54,65 +70,74 @@
     color: var(--main-light-grey);
 }
 
-.navbar-search {
-    cursor: pointer;
+.navbar-item--active a, .navbar-item--active a:hover {
+    color: var(--main-white);
+}
+.navbar-item:not(.navbar-item--active)  a:after {    
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: -2px;
+    height: 1.25px;
+    left: 50%;
+    background: var(--main-light-grey);
+    transition: all .3s ease;
+    width: 0;
 }
 
-.navbar-search input {
+.navbar-item a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+  
+/* Navbar search input */
+.navbar-toolbar {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toolbar input {
     background-color: black;
     border: 1px solid var(--main-white);
     line-height: 1rem;
-    padding: 4px;
-    color: white;
-    display: inline-block;
-    transform: scaleX(0);
-    width: 0;
-    transition: all .5s;
-}
-
-.navbar-search + i, .navbar-right  i {
-    font-size: 1.2rem;
-    letter-spacing: normal;
-}
-
-.navbar-search:hover input,
-.navbar-search:active input,
-.navbar-search:focus input,
-.navbar-search:focus input, 
-.navbar-search:focus input {
-    transform: scaleX(1);
+    padding: 4px 8px;
+    color: var(--main-white);
     width: 200px;
+    margin: 0 10px 0 5px;
 }
 
-/* User account */
-.account {
+/* Navbar account (dropdown menu) */
+.navbar-account {
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer;
 }
 
-.account:hover { 
+.navbar-account:hover { 
     transition-delay: 0s;
 }
 
-.account-img {
+.navbar-account-img {
     width: 32px;
     height: 32px;
     border-radius: 3px;
     margin-right: 10px;
 }
 
-.account-name {
+.navbar-account-name {
     margin-right: 5px;
 }
 
-.account:hover > .account-options {
+.navbar-account:hover > .navbar-account-options {
     transform: scaleY(1);
     opacity: 1;
 }
 
-.account-options {
+.navbar-account-options {
     cursor: auto;
     position: absolute;
     top: 50px;
@@ -127,16 +152,16 @@
     transition: all .1s ease-out;
     transition-delay: .05s; }
 
-.account-options .separator {
+.navbar-account-options .separator {
     border-top: 1px solid var(--main-dark-grey);
     margin: 10px -30px 10px -15px;
 }
 
-.account-options .navbar-item {
+.navbar-account-options .navbar-item {
     margin-top: 7px;
 }
 
-.account-caret {
+.navbar-account-caret {
     position: absolute;
     top: -15px;
     right: 10px;

@@ -1,0 +1,251 @@
+/* Card style header-body */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-header {
+    overflow: hidden;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    padding: 15px 20px;
+    background-color: #222;
+}
+
+.card-header--landscape {
+    height: 175px;
+}
+
+/* Card cover*/
+.movie {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    perspective: 150rem;
+}
+
+.movie h3 {
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.5rem;
+}
+
+.movie-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all .8s ease;
+    border-radius: 10px;
+}
+
+.movie-side--front {
+    position: relative;
+}
+
+.movie-side--front h3 {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px 10px;
+}
+
+.movie-slide h3 {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.movie-side--back {
+    transform: rotateY(-180deg);
+    background-color: rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    height: 100%;
+}
+
+.movie-side--back h3 {
+    font-size: 1.25rem;
+}
+
+.movie-side--back p {
+    font-size: .9rem;
+}
+
+
+.movie-side--back span {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.movie-side--back .buttons {
+    margin-right: 0;
+    align-self: flex-end;
+}
+
+.movie .rating {
+    margin: 5px 0;
+    color:  gold; 
+}
+
+.movie-caption {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.movie-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.movie-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.movie-alert {
+    padding: 4px 10px;
+    background-color: red;
+    font-size: .8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.movie-age {
+    padding: 4px 10px;
+    background-color: rgba(0, 0, 0, .5);
+    color: var(--main-white);
+    border-left: solid 3px var(--main-white);
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.movie-progress {
+    position: absolute;
+    bottom: -12px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background-color: red;
+    height: 3px;
+}
+
+.movie progress::-webkit-progress-value {
+    background-color: red;
+}  
+
+/* Movie card Large */
+.movie-lg {
+    height: 400px;
+    overflow: hidden;
+}
+
+.movie-lg .movie-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.movie-lg h3 {
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, .4);
+    font-size: 1.75rem;
+}
+
+.movie-lg .movie-alert, .movie-lg .movie-age {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.movie-slide {
+    height: 70%;
+    width: 100%;
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+.movie:hover .movie-lg + h3 {
+    color: rebeccapurple !important;
+}
+
+.movie:hover .movie-slide {
+    transform: translateY(0%);
+}
+
+.movie:hover .movie-side--front {
+    transform: rotateY(180deg);
+}
+
+.movie:hover .movie-side--back {
+    transform: rotateY(0);
+}
+
+/* List de minis de películas */
+.movies {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.movies-title {
+    font-size: .9rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.movies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 30px;
+}
+
+.movies-list--lg {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
