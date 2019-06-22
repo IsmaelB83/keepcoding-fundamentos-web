@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Crossbox - Login</title>
+    <title>Crossbox - Index</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
@@ -17,59 +17,60 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/cards.css'>   
     <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
 </head>
 <body>
     <!-- Header with navbar -->
-    <header class='container'>
+    <header>
         <nav class='navbar'>
-            <div class='navbar-left'>
-                <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
-                <ul class='navbar-list'>
-                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
-                    <li class='navbar-item'><a href='/'>Películas</a></li>
-                    <li class='navbar-item'><a href='/'>Series</a></li>
-                    <li class='navbar-item'><a href='/'>Documentales</a></li>
-                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
-                </ul>
-            </div>
-            <div class='navbar-right'>
-                <div class='navbar-toolbar'>
-                    <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                    <input type='text' placeholder='Título, protagonistas, ejemplo'>
-                    <button class='btn'><i class='fas fa-bell btn--white'></i></button>
+            <div class="container navbar-wrapper">
+                <div class='navbar-left'>
+                    <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
+                    <ul class='navbar-list'>
+                        <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
+                        <li class='navbar-item'><a href='/'>Películas</a></li>
+                        <li class='navbar-item'><a href='/'>Series</a></li>
+                        <li class='navbar-item'><a href='/'>Documentales</a></li>
+                        <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                    </ul>
                 </div>
-                <div id ='account' class='navbar-account ml-1'>
-                    <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
-                    <i class='fas fa-caret-down'></i>
-                    <div class='navbar-account-options'>
-                        <div class='navbar-account-caret'>
-                            <i class='fas fa-caret-up'></i>
+                <div class='navbar-right'>
+                    <div class='navbar-toolbar'>
+                        <button class='btn'><i class='fas fa-search btn--white'></i></button>
+                        <input type='text' placeholder='Título, protagonistas, ejemplo'>
+                        <button class='btn'><i class='fas fa-bell btn--white'></i></button>
+                    </div>
+                    <div id ='account' class='navbar-account ml-1'>
+                        <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
+                        <i class='fas fa-caret-down'></i>
+                        <div class='navbar-account-options'>
+                            <div class='navbar-account-caret'>
+                                <i class='fas fa-caret-up'></i>
+                            </div>
+                            <ul class='navbar-list'>
+                                <li class='navbar-item navbar-item--block'>
+                                    <span>Cambiar de perfil</span>
+                                </li>
+                                <li class='navbar-item navbar-item--block'>
+                                    <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
+                                    <a href='/'>Tam</a>
+                                </li>
+                                <li class='navbar-item navbar-item--block'>
+                                    <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
+                                    <a href='/'>Livi</a>
+                                </li>
+                                <li class='separator'></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
+                            </ul>
                         </div>
-                        <ul class='navbar-list'>
-                            <li class='navbar-item navbar-item--block'>
-                                <span>Cambiar de perfil</span>
-                            </li>
-                            <li class='navbar-item navbar-item--block'>
-                                <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
-                                <a href='/'>Tam</a>
-                            </li>
-                            <li class='navbar-item navbar-item--block'>
-                                <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
-                                <a href='/'>Livi</a>
-                            </li>
-                            <li class='separator'></li>
-                            <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
-                            <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
-                            <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Trailer hero panel (new premiere) -->
-    <div class='hero'>
+    <div class='hero hero--border'>
         <div class='hero-wrapper'>
             <video autoplay muted id='trailer'>
                 <source src='/assets/video/trailer.mp4' type='video/mp4'>
@@ -120,36 +121,6 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
                         <div class="buttons">
                             <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
-                </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/alcasser.jpg' alt=''>
-                        <div class='movie-content'>
-                            <h3>Alcasser</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Estreno!</span>
-                                <span class='movie-age'>+16</span>
-                            </div>
-                        </div>
-                        <progress class='movie-progress' value='5' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
-                        <h3>Alcasser</h3>
-                        <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p><span>Año</span>: 2019</p>
-                        <p><span>Calificación:</span> TP</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
                     </div>
@@ -567,35 +538,6 @@
                 </article>
                 <article class='movie'>
                     <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/froming.jpg' alt=''>
-                        <div class='movie-content'>
-                            <h3>Rich Froming</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert d-hidden'></span>
-                                <span class='movie-age d-hidden'></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='movie-side movie-side--back'>
-                        <h3>Rich Froming</h3>
-                        <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>   
-                        <p><span>Año</span>: 2019</p>
-                        <p><span>Calificación:</span> TP</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
-                </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
                         <img class='movie-caption' src='/assets/img/minis/got.jpeg' alt=''>
                         <div class='movie-content'>
                             <h3>Game of Thrones</h3>
@@ -628,10 +570,8 @@
     </main>
     <!-- Footer with social media icons -->
     <footer class='container'>
-        <div class='row'>
-            <div class='col-12 text-center'>
-                <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
-            </div>
+        <div class='row text-center'>
+            <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
         </div>
     </footer>      
 </body>

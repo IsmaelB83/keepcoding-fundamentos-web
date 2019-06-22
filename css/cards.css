@@ -27,7 +27,44 @@
     height: 175px;
 }
 
-/* Card cover*/
+.features {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.65rem;
+    letter-spacing: .6px;
+    margin-top: 10px;
+}
+
+.features-tick {
+    padding: 8px 0;
+    position: relative;
+}
+
+.features-tick p {
+    padding-left: 35px;
+}
+
+.features-tick span {
+    padding-left: 35px;
+    font-size: .9rem;
+    line-height: 1rem;
+    color: var(--main-light-grey);
+}
+
+.features-tick::before {
+    display: inline-block;
+    content: '✓';
+    position: absolute;
+    top: 5px;
+    font-size: 2rem;
+    line-height: 2rem;
+    background: -webkit-linear-gradient(var(--main-white), var(--main-blue-hover));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card cover */
 .movie {
     position: relative;
     width: 100%;
@@ -164,7 +201,7 @@
     background-color: red;
 }  
 
-/* Movie card Large */
+/* Movie card cover Large */
 .movie-lg {
     height: 400px;
     overflow: hidden;

@@ -3,7 +3,7 @@
     position: fixed;
     width: inherit;
     height: var(--navbar-height);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,6 +14,13 @@
     font-size: .8rem;
     font-weight: 400;
     z-index: 10;
+    width: 100%;
+}
+
+.navbar-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /* Left and Right blocks of navigation bar */
@@ -107,6 +114,10 @@
     color: var(--main-white);
     width: 200px;
     margin: 0 10px 0 5px;
+}
+
+.navbar-toolbar input::placeholder {
+    color: var(--main-grey);
 }
 
 /* Navbar account (dropdown menu) */
