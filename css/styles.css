@@ -1,9 +1,10 @@
 /* Texts */
 .title {
-    font-size: 3rem;
-    letter-spacing: 1px;
-    font-weight: 300;
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
     margin: 1rem 0;
+    text-transform: uppercase;
 }
 
 .text-muted {
@@ -157,6 +158,13 @@
 
 .hero-wrapper video {
     transform: translateY(-100px);
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero-wrapper--blur img {
     width: 100%;
     object-position: center;
     object-fit: cover;

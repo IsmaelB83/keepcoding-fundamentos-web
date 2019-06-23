@@ -123,6 +123,47 @@ input mediante posicionamiento absoluto */
   display: none;
 }
 
+.tab-section img {
+  max-width: 400px;
+}
+
+.tab-section .details {
+  display: flex; 
+  flex-direction: column;
+}
+
+.tab-section .details .rating {
+  color: gold;
+  margin: 20px 0;
+}
+
+.tab-section .details p {
+  font-size: 1.1rem;
+}
+
+.tab-section .buttons {
+  margin: 20px 0;
+}
+
+.tab-section .details span {
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.tab-section .sinopsis {
+  padding-left: 20px;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.tab-section iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+}
+
 .tab-nav ul {
   display: flex;
   flex-direction: row;
@@ -159,7 +200,10 @@ input mediante posicionamiento absoluto */
 #tab-1:checked ~ section .tab-section--1,
 #tab-2:checked ~ section .tab-section--2,
 #tab-3:checked ~ section .tab-section--3 {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #tab-1:checked ~ nav .tab-1 .tab-label::after,
