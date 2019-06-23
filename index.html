@@ -24,12 +24,12 @@
         <nav class='navbar'>
             <div class="container navbar-wrapper">
                 <div class='navbar-left'>
-                    <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
+                    <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
                     <ul class='navbar-list'>
                         <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
                         <li class='navbar-item'><a href='/'>Películas</a></li>
-                        <li class='navbar-item'><a href='/'>Series</a></li>
-                        <li class='navbar-item'><a href='/'>Documentales</a></li>
+                        <li class='navbar-item'><a href='/'>Campeonatos</a></li>
+                        <li class='navbar-item'><a href='/'>Motivación</a></li>
                         <li class='navbar-item'><a href='/'>Favoritos</a></li>
                     </ul>
                 </div>
@@ -52,16 +52,16 @@
                                 </li>
                                 <li class='navbar-item navbar-item--block'>
                                     <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
-                                    <a href='/'>Tam</a>
+                                    <a href='/login.html'>Tam</a>
                                 </li>
                                 <li class='navbar-item navbar-item--block'>
                                     <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
-                                    <a href='/'>Livi</a>
+                                    <a href='/login.html'>Livi</a>
                                 </li>
                                 <li class='separator'></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cuenta</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Centro de ayuda</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cerrar sesión</a></li>
                             </ul>
                         </div>
                     </div>
@@ -72,17 +72,18 @@
     <!-- Trailer hero panel (new premiere) -->
     <div class='hero hero--border'>
         <div class='hero-wrapper'>
-            <video autoplay muted id='trailer'>
+            <video autoplay id='trailer'>
                 <source src='/assets/video/trailer.mp4' type='video/mp4'>
             </video>
         </div>
         <div class='hero-content'>
             <div class='container'>
-                <img src='/assets/img/minis/hero-title.webp' alt=''>
+                <h1 class="sub-title text-white">Novedades para ti...</h1>
+                <h2 class="title text-white">Fittest on Earth <span class='text-muted'>(nueva temporada)</span></h2>
                 <div class='hero-buttons mt-3'>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-play mr-1'></i>Reproducir</button>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</button>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</button>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-play mr-1'></i>Reproducir</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
                 </div>
             </div>
             <div class='hero-right'>
@@ -338,7 +339,7 @@
             </div>
         </section>
         <section id="originals" class='row movies mt-4'>
-            <h2 class='movies-title'>Originales Netflix</h2>
+            <h2 class='movies-title'>Originales Crossbox©</h2>
             <div class='movies-list movies-list--lg'>
                 <article class='movie movie-lg'>
                     <img class='movie-caption' src='/assets/img/minis/stranger.jpg' alt=''>
@@ -446,8 +447,8 @@
                 </article>
             </div>
         </section>
-        <section id="sports" class='row movies mt-4'>
-            <h2 class='movies-title'>Marvel</h2>
+        <section id="motivational" class='row movies mt-4'>
+            <h2 class='movies-title'>Videos de Motivación</h2>
             <div class='movies-list'>
                 <article class='movie'>
                     <div class='movie-side movie-side--front'>

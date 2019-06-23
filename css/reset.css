@@ -1,9 +1,15 @@
+/* Simple reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+ul, li { list-style: none; }
+a { text-decoration: none; }
+img, embed, object, video { max-width: 100%; }
+
+/* Variables */
 :root {
     /* Default font */
     font-family: 'Roboto', sans-serif;
@@ -21,5 +27,5 @@
     --navbar-height: 65px;
 }
 
-img, embed, object, video { max-width: 100%; }
+/* General styles */
 body { background-color: black; }

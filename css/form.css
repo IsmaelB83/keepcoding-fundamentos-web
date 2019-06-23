@@ -1,108 +1,177 @@
  /* Form group is a container of inputs, labels, etc. */
-.form-group {
-    width: 100%;
-    padding: 5px 0;
-    position: relative;
+ .form-group {
+  width: 100%;
+  padding: 5px 0;
+  position: relative;
 }
 
 /* Input */
 .input {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    font-size: 1rem;
-    letter-spacing: .5px;
-    line-height: 1.5rem;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 1rem;
+  letter-spacing: .5px;
+  line-height: 1.5rem;
 }
 
 .input--block {
-    width: 100%;
+  width: 100%;
 }
 
 /* :not(:placeholder-shown) -> hack para controlar que el input NO esté vacio (para hacer el aviso más amigable con el usuario)
-   Sólo se muestra el aviso cuando el input NO está vacio, y además NO tiene el foco. Este control se podría mejorar con Javascript
+Sólo se muestra el aviso cuando el input NO está vacio, y además NO tiene el foco. Este control se podría mejorar con Javascript
 */
 .input:not(:placeholder-shown).input:invalid.input:not(:focus) {
-    color: var(--main-red);
-    border: 1px solid var(--main-red);
+  color: var(--main-red);
+  border: 1px solid var(--main-red);
 }
 
 /* Idem que lo anterior, pero además muestro el pseudoelemento after de label de ayuda. Que coloca un signo de exclamación en el propio
-   input mediante posicionamiento absoluto */
+input mediante posicionamiento absoluto */
 .input:not(:placeholder-shown).input:invalid.input:not(:focus) ~ .label--help {
-    display: block;
+  display: block;
 }
 
 .input--light {
-    background-color: var(--main-light-grey);
-    color: black;
-    border: none;
+  background-color: var(--main-light-grey);
+  color: black;
+  border: none;
 }
 
 /* Label */
 .label {
-    align-self: flex-start;
-    font-size: .75rem;
-    font-weight: 500;
-    text-transform: capitalize;
+  align-self: flex-start;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .label--lg {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .label--light {
-    color: var(--main-light-grey);
+  color: var(--main-light-grey);
 }
 
 .label--help {
-    text-align: right;
-    color: var(--main-red);
-    margin-top: 1px;
-    display: none;
-    text-transform: none;
-    position: relative;
+  text-align: right;
+  color: var(--main-red);
+  margin-top: 1px;
+  display: none;
+  text-transform: none;
+  position: relative;
 }
 
 .label--help::after {
-    display: block;
-    content: '❗';
-    position: absolute;
-    font-size: 1.25rem;
-    top: -35px;
-    right: 10px;
-    color: var(--main-red);
+  display: block;
+  content: '❗';
+  position: absolute;
+  font-size: 1.25rem;
+  top: -35px;
+  right: 10px;
+  color: var(--main-red);
 }
 
 /* Checkbox & Radiobutton */
 .form-checkbox, .form-radio {
-    display: none;
+  display: none;
 }
 
 .form-checkbox+label, .form-radio+label {
-    padding-left: 30px;
-    position: relative;
-    cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
 }
 
 .form-checkbox+label:before, .form-radio+label:before {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    padding-top: 1px;
-    font-size: 0;
-    line-height: 1rem;
-    border: 1px solid var(--main-light-grey);
-    border-radius: 2px;
-    color: white;
-    transition: all .35s ease;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding-top: 1px;
+  font-size: 0;
+  line-height: 1rem;
+  border: 1px solid var(--main-light-grey);
+  border-radius: 2px;
+  color: white;
+  transition: all .35s ease;
 }
 
 .form-checkbox:checked+label:before, .form-radio:checked+label:before {
-    background-color: var(--main-blue);
-    content: '✓';
-    font-size: 1.5rem;
-}sear
+  background-color: var(--main-blue);
+  content: '✓';
+  font-size: 1.5rem;
+}
+
+/* Tab panel */
+.tab {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.tab-sections {
+  border-top: 1px solid var(--main-grey);
+  padding: 25px;
+}
+
+.tab-input,
+.tab-section {
+  display: none;
+}
+
+.tab-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.tab-label {
+  cursor: pointer;
+  color: var(--main-white);
+  display: inline-block;
+  padding: 13px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  position: relative;
+}
+
+.tab-label::after {    
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -1px;
+  height: 2px;
+  left: 50%;
+  background: var(--main-blue);
+  transition: all .3s ease;
+  width: 0;
+}
+
+.tab-label:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#tab-1:checked ~ section .tab-section--1,
+#tab-2:checked ~ section .tab-section--2,
+#tab-3:checked ~ section .tab-section--3 {
+  display: block;
+}
+
+#tab-1:checked ~ nav .tab-1 .tab-label::after,
+#tab-2:checked ~ nav .tab-2 .tab-label::after,
+#tab-3:checked ~ nav .tab-3 .tab-label::after {
+  width: 100%; 
+  left: 0; 
+}
+
+
+#tab-1:checked ~ nav .tab-1 .tab-label,
+#tab-2:checked ~ nav .tab-2 .tab-label,
+#tab-3:checked ~ nav .tab-3 .tab-label {
+  color: var(--main-blue);
+}

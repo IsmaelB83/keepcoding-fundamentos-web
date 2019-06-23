@@ -24,12 +24,12 @@
         <nav class='navbar'>
             <div class="container navbar-wrapper">
                 <div class='navbar-left'>
-                    <a href='/' class='navbar-brand'><img src='/assets/img/keepcoding-32x32.png' alt='Logo'></a>
+                    <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
                     <ul class='navbar-list'>
-                        <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
-                        <li class='navbar-item'><a href='/'>Películas</a></li>
-                        <li class='navbar-item'><a href='/'>Series</a></li>
-                        <li class='navbar-item'><a href='/'>Documentales</a></li>
+                        <li class='navbar-item'><a href='/'>Inicio</a></li>
+                        <li class='navbar-item navbar-item--active'><a href='/'>Películas</a></li>
+                        <li class='navbar-item'><a href='/'>Campeonatos</a></li>
+                        <li class='navbar-item'><a href='/'>Motivación</a></li>
                         <li class='navbar-item'><a href='/'>Favoritos</a></li>
                     </ul>
                 </div>
@@ -52,16 +52,16 @@
                                 </li>
                                 <li class='navbar-item navbar-item--block'>
                                     <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
-                                    <a href='/'>Tam</a>
+                                    <a href='/login.html'>Tam</a>
                                 </li>
                                 <li class='navbar-item navbar-item--block'>
                                     <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
-                                    <a href='/'>Livi</a>
+                                    <a href='/login.html'>Livi</a>
                                 </li>
                                 <li class='separator'></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cuenta</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Centro de ayuda</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/'>Cerrar sesión</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cuenta</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Centro de ayuda</a></li>
+                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cerrar sesión</a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
         </nav>
     </header>
     <!-- Hero panel with image -->
-    <div class='hero hero-xl'>
+    <div class='hero'>
         <div class='hero-wrapper--blur'>
             <img src="/assets/img/landing_hero.jpg" alt="">
         </div>
@@ -78,9 +78,9 @@
             <div class='container'>
                 <h1 class="title text-white">Game of Thrones</h1>
                 <div class='hero-buttons mt-3'>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-play mr-1'></i>Reproducir</button>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</button>
-                    <button class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</button>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-play mr-1'></i>Reproducir</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg mr-1'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</a>
+                    <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
                 </div>
             </div>
             <div class='hero-right'>
@@ -89,7 +89,39 @@
         </div>
     </div>
     <!-- Main panel with lists -->
-    <main class='container main-wrapper'>
+    <main class='container main-wrapper main-wrapper--center'>
+        <div class="tab">
+            <input class='tab-input' checked="checked" id='tab-1' type="radio" name="pct" />
+            <input class='tab-input' id='tab-2' type="radio" name="pct" />
+            <input class='tab-input' id='tab-3' type="radio" name="pct" />
+            <nav class='tab-nav'>
+                <ul>
+                    <li class="tab-1">
+                        <label class='tab-label tab-label--1' for="tab-1">Sinopsis</label>
+                    </li>
+                    <li class="tab-2">
+                        <label class='tab-label tab-label--2' for="tab-2">Temporada 1</label>
+                    </li>
+                    <li class="tab-3">
+                        <label class='tab-label tab-label--3' for="tab-3">Temporada 2</label>
+                    </li>
+                </ul>
+            </nav>
+            <section class='tab-sections'>
+                <div class="tab-section tab-section--1">
+                    <h2>Sinopsis</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quidem minus nostrum, voluptatem accusamus aspernatur quia harum ratione, officia laudantium inventore autem doloribus atque labore numquam non. Hic, animi.</p>
+                </div>
+                <div class="tab-section tab-section--2">
+                    <h2>Temporada 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!</p>
+                </div>
+                <div class="tab-section tab-section--3">
+                    <h2>Temporada 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+                </div>
+            </section>
+        </div>
     </main>
     <!-- Footer with social media icons -->
     <footer class='container'>

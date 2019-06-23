@@ -5,6 +5,7 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: all .15s ease;
+    display: inline-block;
 }
 
 .btn:focus { outline:0; }
@@ -70,5 +71,4 @@
     background-color: var(--main-white);
     color: black;
     transform: scale(1.1,1.05) translateY(-1px);
-
 }
