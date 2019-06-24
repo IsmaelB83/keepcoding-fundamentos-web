@@ -125,6 +125,7 @@ input mediante posicionamiento absoluto */
 
 .tab-section img {
   max-width: 400px;
+  border-radius: 10px;
 }
 
 .tab-section .details {
@@ -132,24 +133,24 @@ input mediante posicionamiento absoluto */
   flex-direction: column;
 }
 
-.tab-section .details .rating {
+.tab-section .rating {
   color: gold;
   margin: 20px 0;
 }
 
-.tab-section .details p {
+.tab-section p {
   font-size: 1.1rem;
+  margin: 5px 0;
 }
 
 .tab-section .buttons {
   margin: 20px 0;
 }
 
-.tab-section .details span {
+.tab-section span {
   font-weight: 500;
   text-transform: uppercase;
   display: inline-block;
-  margin: 5px 0;
 }
 
 .tab-section .sinopsis {
@@ -218,4 +219,10 @@ input mediante posicionamiento absoluto */
 #tab-2:checked ~ nav .tab-2 .tab-label,
 #tab-3:checked ~ nav .tab-3 .tab-label {
   color: var(--main-blue);
+}
+
+.section-episodios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
