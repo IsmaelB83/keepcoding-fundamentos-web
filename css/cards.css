@@ -139,9 +139,10 @@
 }
 
 .movie-side--back iframe {
-    visibility: hidden;
+    opacity: 0;
     width: 100%;
     height: 100%;
+    transition: all 1s ease;
 }
 
 .movie .rating {
@@ -275,7 +276,7 @@
 }
 
 .movie:hover .movie-side--back iframe {
-    visibility: visible;
+    opacity: 1;
 }
 
 /* List de minis de películas */

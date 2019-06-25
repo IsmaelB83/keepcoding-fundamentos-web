@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
     <link rel='stylesheet' type='text/css' href='/css/fontawesome/css/all.css'>
-    <link rel='icon' href='/assets/img/keepcoding-32x32.png' sizes='32x32'>
+    <link rel="icon" href='/assets/img/favicon.ico' type="image/x-icon">
     <!-- Styles -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/grid.css'>
@@ -23,15 +23,15 @@
     <header class='container'>
         <a href='/index.html'><img class='logo' src='/assets/img/brand.png' alt=''></a>
     </header>
-    <!-- Main section with login form and features -->
+    <!-- Main section with an aside card and the login form -->
     <main class='container login'>
         <div class='login-title'>
             <h1 class='title'>Iniciar sesión</h1>
         </div>
-        <div class='login-info'>
+        <aside class='login-info'>
             <div class='card'>
                 <div class='card-body'>
-                    <h3 class='sub-title'>Bienvenido Crossbox España</h3>
+                    <h3 class='sub-title'>Bienvenido Crossbox© España</h3>
                     <ul class='features'>
                         <li class='features-tick'>
                             <p>Primer mes gratis</p>
@@ -42,7 +42,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </aside>
         <form action='/' method='POST' class='login-form'>
             <div class="form-group">
                 <label for='mail' class='label label--light'>Correo electrónico</label>
@@ -69,7 +69,27 @@
     </main>   
     <!-- Footer -->
     <footer class='container'>
-        <p class='text-white'>Fullstack Bootcamp KeepCoding VII - <a class='link' href='https://www.laestanciaazul.com/'>Ismael Bernal</a></p>
+        <div class='footer-content'>
+            <p>Una creación de <a class='link' href='https://www.laestanciaazul.com/'> Ismael Bernal</a></p>
+            <p>Alumnno del bootcamp <a class='link' href='https://keepcoding.io/es/keepcoding-web-development-master-bootcamp/'> Fullstack Web Development VII Edición</a> de KeepCoding</p>
+        </div>
+        <div class='social'>
+            <a class='social-icon' href="https://laestanciaazul.com">
+                <img src="/assets/img/estanciaazul.ico" alt="">
+            </a>      
+            <a class='social-icon' href="https://github.com/IsmaelB83">
+                <i class="fab fa-github social-icon--github"></i>
+            </a>
+            <a class='social-icon' href="https://www.linkedin.com/in/ismael-bernal-10497a51/">
+                <i class="fab fa-twitter social-icon--twitter"></i>
+            </a>
+            <a class='social-icon' href="https://www.instagram.com/isma83_/">
+                <i class="fab fa-instagram social-icon--instagram"></i>
+            </a>
+            <a class='social-icon' href="https://twitter.com/Ismab83">
+                <i class="fab fa-linkedin social-icon--linkedin"></i>
+            </a>
+        </div>
     </footer>
 </body>
 </html>
