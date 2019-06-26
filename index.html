@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fugaz+One&display=swap' rel='stylesheet'>
     <link rel='stylesheet' type='text/css' href='/css/fontawesome/css/all.css'>
-    <link rel="icon" href='/assets/img/favicon.ico' type="image/x-icon">
+    <link rel='icon' href='/assets/img/favicon.ico' type='image/x-icon'>
     <!-- Styles -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/grid.css'>
@@ -23,31 +23,30 @@
     <!-- Header with navbar -->
     <header>
         <nav class='navbar'>
-            <div class="container navbar-wrapper">
-                <div class='navbar-left'>
-                    <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
-                    <ul class='navbar-list'>
+            <div class='container'>
+                <label for='toggler' class='navbar-toggler'></label>
+                <input type='checkbox' id='toggler' role='button'>
+                <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
+                <div class='navbar-expand--lg'>
+                    <ul class='navbar-list navbar-list--main'>
                         <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
                         <li class='navbar-item'><a href='/'>Películas</a></li>
                         <li class='navbar-item'><a href='/'>Campeonatos</a></li>
                         <li class='navbar-item'><a href='/'>Motivación</a></li>
                         <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                        <li class='navbar-item navbar-item--right'>
+                            <button class='btn'><i class='fas fa-search btn--white'></i></button>
+                            <input type='text' placeholder='Título, protagonistas, ejemplo'>
+                        </li>
                     </ul>
-                </div>
-                <div class='navbar-right'>
-                    <div class='navbar-toolbar'>
-                        <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                        <input type='text' placeholder='Título, protagonistas, ejemplo'>
-                        <button class='btn'><i class='fas fa-bell btn--white'></i></button>
-                    </div>
-                    <div id ='account' class='navbar-account ml-1'>
+                    <div id ='account' class='navbar-account'>
                         <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
                         <i class='fas fa-caret-down'></i>
                         <div class='navbar-account-options'>
                             <div class='navbar-account-caret'>
                                 <i class='fas fa-caret-up'></i>
                             </div>
-                            <ul class='navbar-list'>
+                            <ul class='navbar-list navbar-list--vertical'>
                                 <li class='navbar-item navbar-item--block'>
                                     <span>Cambiar de perfil</span>
                                 </li>
@@ -79,8 +78,8 @@
         </div>
         <div class='hero-content'>
             <div class='container'>
-                <h1 class="sub-title text-white">Novedades para ti...</h1>
-                <h2 class="title text-white">Fittest on Earth <span class='text-muted'>(nueva temporada)</span></h2>
+                <h1 class='sub-title text-white'>Novedades para ti...</h1>
+                <h2 class='title text-white'>Fittest on Earth <span class='text-muted'>(nueva temporada)</span></h2>
                 <div class='hero-buttons mt-3'>
                     <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-play mr-1'></i>Reproducir</a>
                     <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-plus mr-1'></i>Añadir a mi lista</a>
@@ -94,7 +93,7 @@
     </aside>
     <!-- Main panel with lists -->
     <main class='container main-wrapper'>
-        <section id="mylist" class='row movies mt-3'>
+        <section id='mylist' class='row movies mt-3'>
             <h2 class='movies-title'>Seguir viendo</h2>
             <div class='movies-list'>
                 <article class='movie'>
@@ -112,16 +111,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Froning: The Fittest Man in History</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
                         </div>
                         <p><span>Año</span>: 2015</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -142,16 +141,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Every Second Counts: 2008 CrossFit Games</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='far fa-star'></i>
+                            <i class='far fa-star'></i>
                         </div>   
                         <p><span>Año</span>: 2009</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -172,16 +171,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Mat Fraser unbeatable</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
                         </div>   
                         <p><span>Año</span>: 2021</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -202,16 +201,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>The Business behind the sport</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
                         </div>      
                         <p><span>Año</span>: 2022</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -232,16 +231,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Redeemed and the dominant</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
                         </div>      
                         <p><span>Año</span>: 2019</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -262,16 +261,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Lift the world</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
                         </div>      
                         <p><span>Año</span>: 2016</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -292,16 +291,16 @@
                     <div class='movie-side movie-side--back'>
                         <h3>Ultrarunners</h3>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
                         </div>       
                         <p><span>Año</span>: 2019</p>
                         <p><span>Calificación:</span> TP</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -322,16 +321,16 @@
                         <div class='movie-side movie-side--back'>
                             <h3>Klokov-nator</h3>
                             <div class='rating'>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star-half-alt'></i>
+                                <i class='far fa-star'></i>
                             </div>       
                             <p><span>Año</span>: 2022</p>
                             <p><span>Calificación:</span> TP</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class="buttons">
+                            <div class='buttons'>
                                 <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                                 <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                             </div>
@@ -339,7 +338,7 @@
                     </article> 
                 </div>
         </section>
-        <section id="originals" class='row movies mt-4'>
+        <section id='originals' class='row movies mt-4'>
             <h2 class='movies-title'>Originales Crossbox©</h2>
             <div class='movies-list movies-list--lg'>
                 <article class='movie movie-lg'>
@@ -353,15 +352,15 @@
                     </div>
                     <div class='movie-slide'>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
                         </div>
                         <p><span>Año</span>: 2017</p>
                         <p>The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth.</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -378,15 +377,15 @@
                     </div>   
                     <div class='movie-slide'>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='far fa-star'></i>
                         </div>
                         <p><span>Año</span>: 2019</p>
                         <p>In 2017 the fittest athletes on Earth took on the unknown and unknowable during four of the most intense days of competition in CrossFit Games history.</p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -403,18 +402,18 @@
                     </div>       
                     <div class='movie-slide'>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
                         </div>   
                         <p><span>Año</span>: 2015</p>
                         <p>
                             Rich Froning Jr. is a legend in CrossFit and the Sport of Fitness. In this biopic, take a look at his childhood, follow his quest
                             for a fourth CrossFit Games title, and see him as a son, a husband and a new father.
                         </p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -431,18 +430,18 @@
                     </div>   
                     <div class='movie-slide'>
                         <div class='rating'>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                            <i class='far fa-star'></i>
                         </div>   
                         <p><span>Año</span>: 2016</p>
                         <p>
                             This documentary takes a raw and introspective look into the world of Functional Fitness,
                             illustrating what this growing trend is all about. 
                         </p>
-                        <div class="buttons">
+                        <div class='buttons'>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
@@ -450,7 +449,7 @@
                 </article>
             </div>
         </section>
-        <section id="motivational" class='row movies mt-4'>
+        <section id='motivational' class='row movies mt-4'>
             <h2 class='movies-title'>Videos de Motivación</h2>
             <div class='movies-list'>
                 <article class='movie'>
@@ -460,12 +459,12 @@
                             <h3>This is my year</h3>
                             <div class='movie-tags'>
                                 <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>3'02"</span>
+                                <span class='movie-age'>3'02'</span>
                             </div>
                         </div>
                     </div>
                     <div class='movie-side movie-side--back p-0'>
-                        <iframe src="https://www.youtube.com/embed/YKgoJKzFKUI" frameborder="0" allowfullscreen></iframe>
+                        <iframe src='https://www.youtube.com/embed/YKgoJKzFKUI' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
                 <article class='movie'>
@@ -475,12 +474,12 @@
                             <h3>Champion</h3>
                             <div class='movie-tags'>
                                 <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>4'18"</span>
+                                <span class='movie-age'>4'18'</span>
                             </div>
                         </div>
                     </div>
                     <div class='movie-side movie-side--back p-0'>
-                        <iframe src="https://www.youtube.com/embed/fZjrJT9Ot0s" frameborder="0" allowfullscreen></iframe>
+                        <iframe src='https://www.youtube.com/embed/fZjrJT9Ot0s' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
                 <article class='movie'>
@@ -490,12 +489,12 @@
                             <h3>Hero</h3>
                             <div class='movie-tags'>
                                 <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>3'43"</span>
+                                <span class='movie-age'>3'43'</span>
                             </div>
                         </div>
                     </div>
                     <div class='movie-side movie-side--back p-0'>
-                        <iframe src="https://www.youtube.com/embed/qDlZdLhJgME" frameborder="0" allowfullscreen></iframe>
+                        <iframe src='https://www.youtube.com/embed/qDlZdLhJgME' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
                 <article class='movie'>
@@ -505,12 +504,12 @@
                             <h3>MURPH Wod</h3>
                             <div class='movie-tags'>
                                 <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>2'59"</span>
+                                <span class='movie-age'>2'59'</span>
                             </div>
                         </div>
                     </div>
                     <div class='movie-side movie-side--back p-0'>
-                        <iframe src="https://www.youtube.com/embed/GS5_87I8RDI" frameborder="0" allowfullscreen></iframe>
+                        <iframe src='https://www.youtube.com/embed/GS5_87I8RDI' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>            
             </div>
@@ -523,20 +522,20 @@
             <p>Alumnno del bootcamp <a class='link' href='https://keepcoding.io/es/keepcoding-web-development-master-bootcamp/'> Fullstack Web Development VII Edición</a> de KeepCoding</p>
         </div>
         <div class='social'>
-            <a class='social-icon' href="https://laestanciaazul.com">
-                <img src="/assets/img/estanciaazul.ico" alt="">
+            <a class='social-icon' href='https://laestanciaazul.com'>
+                <img src='/assets/img/estanciaazul.ico' alt=''>
             </a>   
-            <a class='social-icon' href="https://github.com/IsmaelB83">
-                <i class="fab fa-github social-icon--github"></i>
+            <a class='social-icon' href='https://github.com/IsmaelB83'>
+                <i class='fab fa-github social-icon--github'></i>
             </a>
-            <a class='social-icon' href="https://www.linkedin.com/in/ismael-bernal-10497a51/">
-                <i class="fab fa-twitter social-icon--twitter"></i>
+            <a class='social-icon' href='https://www.linkedin.com/in/ismael-bernal-10497a51/'>
+                <i class='fab fa-twitter social-icon--twitter'></i>
             </a>
-            <a class='social-icon' href="https://www.instagram.com/isma83_/">
-                <i class="fab fa-instagram social-icon--instagram"></i>
+            <a class='social-icon' href='https://www.instagram.com/isma83_/'>
+                <i class='fab fa-instagram social-icon--instagram'></i>
             </a>
-            <a class='social-icon' href="https://twitter.com/Ismab83">
-                <i class="fab fa-linkedin social-icon--linkedin"></i>
+            <a class='social-icon' href='https://twitter.com/Ismab83'>
+                <i class='fab fa-linkedin social-icon--linkedin'></i>
             </a>
         </div>
     </footer>
