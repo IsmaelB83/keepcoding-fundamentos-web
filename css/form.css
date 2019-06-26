@@ -109,13 +109,13 @@ input mediante posicionamiento absoluto */
 
 /* Tab panel */
 .tab {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
 }
 
 .tab-sections {
   border-top: 1px solid var(--main-grey);
-  padding: 25px;
+  padding: 20px 0;
 }
 
 .tab-input,
@@ -123,9 +123,9 @@ input mediante posicionamiento absoluto */
   display: none;
 }
 
-.tab-section img {
-  max-width: 400px;
+.section-mini {
   border-radius: 10px;
+  width: 100%;
 }
 
 .tab-section .details {
@@ -135,15 +135,6 @@ input mediante posicionamiento absoluto */
 
 .tab-section .rating {
   color: gold;
-  margin: 20px 0;
-}
-
-.tab-section p {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-
-.tab-section .buttons {
   margin: 20px 0;
 }
 
@@ -221,8 +212,28 @@ input mediante posicionamiento absoluto */
   color: var(--main-blue);
 }
 
-.section-episodios {
+.section-episodes {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 500px) {
+  #tab-1:checked ~ section .tab-section--1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-section .sinopsis {
+    padding-left: 0;
+    font-size: .9rem;
+  }
+
+  .tab-section .details p {
+    margin-bottom: 5px;
+  }
+
+  .tab-label {
+    padding: 13px 20px;
+  }  
 }

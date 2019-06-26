@@ -156,18 +156,30 @@ footer {
     text-transform: uppercase;
 }
 
-.text-muted {
-    font-size: .3em;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
 .sub-title {
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: .75px;
 }
 
-.text-white {
-    color: var(--main-light-grey);
+.text-muted {
+    font-size: .3em;
+    text-transform: uppercase;
+}
+
+.text-white { color: var(--main-light-grey); }
+
+@media (max-width: 700px) { 
+    .title {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .text-muted { font-size: .75rem; }
+
+    .sub-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: .6px;
+    }
 }

@@ -294,25 +294,49 @@
 
 .movies-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-flow: row;
     grid-gap: 30px;
 }
 
 .movies-list--lg {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /* Episodio */
-.episodio {
+.episode {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.section-episodios .episodio img {
+.episode .buttons {
+    margin-top: 10px;
+}
+
+.episode img {
+    width: 150px;
     max-width: 150px;
     margin-right: 20px;
-    margin-bottom: 10px;
 }
-  
+
+.episode-summary {
+    font-size: .95rem;
+}
+ 
+@media (max-width: 500px) {
+    .episode {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .episode img {
+        width: 100%;
+        margin-bottom: 15px;
+        object-fit: contain;
+    }
+
+    .episode .buttons { margin-top: 5px; }  
+}
