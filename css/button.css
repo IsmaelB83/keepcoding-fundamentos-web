@@ -64,7 +64,7 @@
     text-transform: none;
     color: var(--main-white);
     font-weight: 300;
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
 .btn-trailer:hover {

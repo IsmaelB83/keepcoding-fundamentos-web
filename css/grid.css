@@ -1,8 +1,8 @@
 /* Container */
 .container { 
-    position: relative;
     margin: 0 auto;
-    width: 90%;
+    width: 93%;
+    max-width: 1400px;
 };
 
 /* Columns */

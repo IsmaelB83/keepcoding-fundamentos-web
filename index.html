@@ -25,45 +25,41 @@
         <nav class='navbar'>
             <div class='container'>
                 <label for='toggler' class='navbar-toggler'></label>
-                <input type='checkbox' id='toggler' role='button'>
-                <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
-                <div class='navbar-expand--lg'>
-                    <ul class='navbar-list navbar-list--main'>
-                        <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
-                        <li class='navbar-item'><a href='/'>Películas</a></li>
-                        <li class='navbar-item'><a href='/'>Campeonatos</a></li>
-                        <li class='navbar-item'><a href='/'>Motivación</a></li>
-                        <li class='navbar-item'><a href='/'>Favoritos</a></li>
-                        <li class='navbar-item navbar-item--right'>
-                            <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                            <input type='text' placeholder='Título, protagonistas, ejemplo'>
-                        </li>
-                    </ul>
-                    <div id ='account' class='navbar-account'>
-                        <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
-                        <i class='fas fa-caret-down'></i>
-                        <div class='navbar-account-options'>
-                            <div class='navbar-account-caret'>
-                                <i class='fas fa-caret-up'></i>
-                            </div>
-                            <ul class='navbar-list navbar-list--vertical'>
-                                <li class='navbar-item navbar-item--block'>
-                                    <span>Cambiar de perfil</span>
-                                </li>
-                                <li class='navbar-item navbar-item--block'>
-                                    <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
-                                    <a href='/login.html'>Tam</a>
-                                </li>
-                                <li class='navbar-item navbar-item--block'>
-                                    <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
-                                    <a href='/login.html'>Livi</a>
-                                </li>
-                                <li class='separator'></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cuenta</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Centro de ayuda</a></li>
-                                <li class='navbar-item navbar-item--block bold'><a href='/login.html'>Cerrar sesión</a></li>
-                            </ul>
-                        </div>
+                <input type='checkbox' id='toggler' role='button'>  
+                <a class='navbar-brand navbar-brand--small mr-1' href='/'><img src='/assets/img/brand.png' alt='Logo'></a>              
+                <ul class='navbar-list navbar-list--main'>
+                    <li class='navbar-item navbar-brand'><a href='/'><img src='/assets/img/brand.png' alt='Logo'></a></li>
+                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
+                    <li class='navbar-item'><a href='/'>Documentales</a></li>
+                    <li class='navbar-item'><a href='/'>Competición</a></li>
+                    <li class='navbar-item'><a href='/'>Motivación</a></li>
+                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                    <li class='navbar-item'>
+                        <button class='btn'><i class='fas fa-search btn--white'></i></button>
+                        <input type='text' placeholder='Título, protagonistas...'>
+                    </li>
+                </ul>
+                <div id ='account' class='account'>
+                    <img  src='/assets/img/account_isma.png' alt='account'>
+                    <i class='fas fa-caret-down'></i>
+                    <div class='account-options'>
+                        <ul class='account-list'>
+                            <li class='navbar-item'>
+                                <span>Cambiar de perfil</span>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/assets/img/account_tam.png' alt='account'>
+                                <a href='/login.html'>Tam</a>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/assets/img/account_livi.png' alt='account'>
+                                <a href='/login.html'>Livi</a>
+                            </li>
+                            <li class='separator'></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cuenta</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Centro de ayuda</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cerrar sesión</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -86,9 +82,7 @@
                     <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
                 </div>
             </div>
-            <div class='hero-right'>
-                <span class='agerating'>16 +</span>
-            </div>
+            <span class='agerating'>16 +</span>
         </div>
     </aside>
     <!-- Main panel with lists -->
@@ -336,7 +330,7 @@
                             </div>
                         </div>
                     </article> 
-                </div>
+            </div>
         </section>
         <section id='originals' class='row movies mt-4'>
             <h2 class='movies-title'>Originales Crossbox©</h2>

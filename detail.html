@@ -23,52 +23,47 @@
     <!-- Header with navbar -->
     <header>
         <nav class='navbar'>
-            <div class="container navbar-wrapper">
-                <div class='navbar-left'>
-                    <a href='/' class='navbar-brand mr-1'><img src='/assets/img/brand.png' alt='Logo'></a>
-                    <ul class='navbar-list'>
-                        <li class='navbar-item'><a href='/'>Inicio</a></li>
-                        <li class='navbar-item navbar-item--active'><a href='/'>Películas</a></li>
-                        <li class='navbar-item'><a href='/'>Campeonatos</a></li>
-                        <li class='navbar-item'><a href='/'>Motivación</a></li>
-                        <li class='navbar-item'><a href='/'>Favoritos</a></li>
-                    </ul>
-                </div>
-                <div class='navbar-right'>
-                    <div class='navbar-toolbar'>
+            <div class='container'>
+                <label for='toggler' class='navbar-toggler'></label>
+                <input type='checkbox' id='toggler' role='button'>  
+                <a class='navbar-brand navbar-brand--small mr-1' href='/'><img src='/assets/img/brand.png' alt='Logo'></a>              
+                <ul class='navbar-list navbar-list--main'>
+                    <li class='navbar-item navbar-brand'><a href='/'><img src='/assets/img/brand.png' alt='Logo'></a></li>
+                    <li class='navbar-item navbar-item--active'><a href='/'>Inicio</a></li>
+                    <li class='navbar-item'><a href='/'>Documentales</a></li>
+                    <li class='navbar-item'><a href='/'>Competición</a></li>
+                    <li class='navbar-item'><a href='/'>Motivación</a></li>
+                    <li class='navbar-item'><a href='/'>Favoritos</a></li>
+                    <li class='navbar-item'>
                         <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                        <input type='text' placeholder='Título, protagonistas, ejemplo'>
-                        <button class='btn'><i class='fas fa-bell btn--white'></i></button>
-                    </div>
-                    <div id ='account' class='navbar-account ml-1'>
-                        <img class='navbar-account-img' src='/assets/img/account_isma.png' alt='account'>
-                        <i class='fas fa-caret-down'></i>
-                        <div class='navbar-account-options'>
-                            <div class='navbar-account-caret'>
-                                <i class='fas fa-caret-up'></i>
-                            </div>
-                            <ul class='navbar-list navbar-list--vertical'>
-                                <li class='navbar-item'>
-                                    <span>Cambiar de perfil</span>
-                                </li>
-                                <li class='navbar-item'>
-                                    <img class='navbar-account-img' src='/assets/img/account_tam.png' alt='account'>
-                                    <a href='/login.html'>Tam</a>
-                                </li>
-                                <li class='navbar-item'>
-                                    <img class='navbar-account-img' src='/assets/img/account_livi.png' alt='account'>
-                                    <a href='/login.html'>Livi</a>
-                                </li>
-                                <li class='separator'></li>
-                                <li class='navbar-item bold'><a href='/login.html'>Cuenta</a></li>
-                                <li class='navbar-item bold'><a href='/login.html'>Centro de ayuda</a></li>
-                                <li class='navbar-item bold'><a href='/login.html'>Cerrar sesión</a></li>
-                            </ul>
-                        </div>
+                        <input type='text' placeholder='Título, protagonistas...'>
+                    </li>
+                </ul>
+                <div id ='account' class='account'>
+                    <img  src='/assets/img/account_isma.png' alt='account'>
+                    <i class='fas fa-caret-down'></i>
+                    <div class='account-options'>
+                        <ul class='account-list'>
+                            <li class='navbar-item'>
+                                <span>Cambiar de perfil</span>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/assets/img/account_tam.png' alt='account'>
+                                <a href='/login.html'>Tam</a>
+                            </li>
+                            <li class='navbar-item'>
+                                <img src='/assets/img/account_livi.png' alt='account'>
+                                <a href='/login.html'>Livi</a>
+                            </li>
+                            <li class='separator'></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cuenta</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Centro de ayuda</a></li>
+                            <li class='navbar-item bold'><a href='/login.html'>Cerrar sesión</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav>        
     </header>
     <!-- Hero panel with image -->
     <section class='hero'>
@@ -84,9 +79,7 @@
                     <a href='/detail.html' class='btn btn-trailer btn--lg'><i class='fas fa-list mr-1'></i>Más infomación</a>
                 </div>
             </div>
-            <div class='hero-right'>
-                <span class='agerating'>16 +</span>
-            </div>
+            <span class='agerating'>16 +</span>
         </div>
     </section>
     <!-- Main panel with lists -->
@@ -126,7 +119,7 @@
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
                         </div>
                     </div>
-                    <div class='episode-summary'>
+                    <div class='sinopsis'>
                         <p>
                             El documental <a class='link' href="https://www.netflix.com/title/80173487"><quote>'Fittest on Earth: a decade of fitness'</quote></a>, disponible en Netflix. Se trata de un documental de casi dos horas
                             de duración en el que podemos ver cómo fueron los Crossfit Games de 2016, en su décimo aniversario desde su primera celebración.
@@ -148,37 +141,35 @@
                     <iframe src="https://www.youtube.com/embed/OJa4HPVAk3A" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="tab-section tab-section--3">
-                    <div class='section-episodes'>
-                        <figure class="episode">
-                            <img src="/assets/img/minis/fittest_2015.jpg" alt="">
-                            <figcaption class="episode-summary">
-                                <p>
-                                    The 2015 Reebok CrossFit Games were a 5 day, 13 event, grueling test to find the fittest male and female on earth. "Fittest on Earth" follows the dramatic
-                                    story of the top athletes who qualified and competed. A behind the scenes look into what it takes to be among the worlds elite athletes. Athletes find out
-                                    the events they are going to test themselves weeks, sometimes days and even minutes before they take the competition floor. The film follows 8 of the worlds
-                                    top athletes as they compete.
-                                </p>
-                                <div class="buttons">
-                                    <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
-                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
-                                </div>                       
-                            </figcaption>
-                        </figure>
-                        <figure class="episode">
-                            <img src="/assets/img/minis/fittest_detail_2.jpg" alt="">
-                            <figcaption class="episode-summary">
-                                <p>
-                                    The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth. "Fittest on Earth: A Decade of Fitness"
-                                    follows the dramatic story of the top athletes who qualified and competed and offers an inside look at what it takes to be among the world's elite athletes,
-                                    both in training and on the competition floor.
-                                </p>
-                                <div class="buttons">
-                                    <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
-                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
-                                </div>                       
-                            </figcaption>
-                        </figure>   
-                    </div>
+                    <figure class="episode">
+                        <img src="/assets/img/minis/fittest_2015.jpg" alt="">
+                        <figcaption class="episode-summary">
+                            <p>
+                                The 2015 Reebok CrossFit Games were a 5 day, 13 event, grueling test to find the fittest male and female on earth. "Fittest on Earth" follows the dramatic
+                                story of the top athletes who qualified and competed. A behind the scenes look into what it takes to be among the worlds elite athletes. Athletes find out
+                                the events they are going to test themselves weeks, sometimes days and even minutes before they take the competition floor. The film follows 8 of the worlds
+                                top athletes as they compete.
+                            </p>
+                            <div class="buttons">
+                                <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
+                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
+                            </div>                       
+                        </figcaption>
+                    </figure>
+                    <figure class="episode">
+                        <img src="/assets/img/minis/fittest_detail_2.jpg" alt="">
+                        <figcaption class="episode-summary">
+                            <p>
+                                The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth. "Fittest on Earth: A Decade of Fitness"
+                                follows the dramatic story of the top athletes who qualified and competed and offers an inside look at what it takes to be among the world's elite athletes,
+                                both in training and on the competition floor.
+                            </p>
+                            <div class="buttons">
+                                <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
+                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
+                            </div>                       
+                        </figcaption>
+                    </figure>   
                 </div>
             </section>
         </div>

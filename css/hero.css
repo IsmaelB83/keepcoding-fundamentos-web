@@ -65,13 +65,19 @@
     align-items: flex-start;
 }
 
-.hero-right {
-    align-self: flex-end;
+.hero-content .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-right .agerating {
-    padding: 15px;
-    padding-right: 50px;
+.agerating {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    width: 80px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, .3);
     color: var(--main-white);
     border-left: solid 3px var(--main-white);
@@ -115,6 +121,11 @@
     .hero img {
         height: 100%;
     }
+
+    .hero-content .container {
+        padding-top: 75px;
+        justify-content: flex-start;
+    }
     
     .hero-buttons {
         flex-direction: column;
@@ -124,6 +135,8 @@
 
     .hero-buttons a {
         margin-bottom: 5px;
+        padding: 8px 10px;
+        font-size: .9rem !important;
     }
     
 }
