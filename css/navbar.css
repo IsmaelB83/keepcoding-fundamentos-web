@@ -1,8 +1,12 @@
-/****************************
- *      Navigation bar      *
- ****************************/
+/*****************************
+ *      Navigation bar       *
+ *****************************
+ * Responsive navbar with    *
+ * pure CSS and the checkbox *
+ * hack                      *
+ *****************************/
 
-.navbar {
+ .navbar {
     /* Positioning */
     position: fixed;
     width: 100%;
@@ -21,12 +25,12 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
-/* Content within navigation var is centered in screen in the "container" */
 .navbar .container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
 
 /* Logo */
@@ -88,7 +92,7 @@
 /* Navbar account (dropdown menu) */
 .account {
     position: absolute;
-    right: 40px;
+    right: 0;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -152,6 +156,7 @@
     background-color: transparent;
     cursor: pointer;
     z-index: 9999;
+    display: none;
 }
 
 .navbar-toggler:before {
@@ -207,4 +212,6 @@
     .navbar-item input { font-size: 1rem; }
     #toggler:checked ~ .navbar-list { transform: translateX(100%); }
     #toggler:checked ~ .navbar-brand--small { display: none; }
+    .navbar-toggler { display: inline-block; }
+    .account { right: 40px;}
 }
