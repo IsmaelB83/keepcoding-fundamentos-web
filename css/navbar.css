@@ -150,12 +150,13 @@
 .navbar-toggler {
     position: absolute;
     right: 0;
-    width: 36px;
+    width: 30px;
     height: 30px;
     background-color: transparent;
     cursor: pointer;
     z-index: 9999;
     display: none;
+    transition: all .3s ease;
 }
 
 .navbar-toggler:before {
@@ -182,13 +183,14 @@
         left: -100%;
         height: 100vh;
         width: 100%;
+        z-index: 1000;
         /* Layout*/
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         /* Style */
-        background-color: rgba(0, 0, 0, .7);
+        background-color: rgba(0, 0, 0, .9);
         text-transform: uppercase;
         font-size: 1.5rem;
         transition: all .3s ease;
@@ -209,6 +211,12 @@
         margin-right: 5px;
     }
     .navbar-item input { font-size: 1rem; }
+    #toggler:checked ~ .navbar-toggler,
+    #toggler:checked ~ .navbar-toggler::before {
+        transform: rotateZ(-45deg) translateX(-3px);
+    }
+
+
     #toggler:checked ~ .navbar-list { transform: translateX(100%); }
     #toggler:checked ~ .navbar-brand--small { display: none; }
     .navbar-toggler { display: inline-block; right: 2.5%; }
