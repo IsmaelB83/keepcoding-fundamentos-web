@@ -34,8 +34,10 @@
                     <li class='navbar-item'><a href='/'>Motivación</a></li>
                     <li class='navbar-item'><a href='/'>Favoritos</a></li>
                     <li class='navbar-item'>
-                        <button class='btn'><i class='fas fa-search btn--white'></i></button>
-                        <input type='text' placeholder='Título, protagonistas...'>
+                        <form action="/" method="GET">
+                            <button class='btn'action="submit"><i class='fas fa-search btn--white'></i></button>
+                            <input type='text' placeholder='Título, protagonistas...'>
+                        </form>
                     </li>
                 </ul>
                 <div id ='account' class='account'>
@@ -112,7 +114,15 @@
                             <i class="far fa-star"></i>
                         </div>
                         <p><span>Años:</span> 2015, 2016, 2017</p>
-                        <p><span>Episodios:</span> 2 Episodios</p>                        
+                        <p><span>Episodios:</span> 2 Episodios</p>     
+                        <p><span>Actores:</span>
+                            <ul class='details-actors'>
+                                <li>Mat Fraser</li>
+                                <li>Rich Froning</li>
+                                <li>Annie Thorisdottir</li>
+                                <li>Josh Bridges</li>
+                            </ul>
+                        </p>                   
                         <div class="buttons my-1">
                             <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
                             <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
@@ -162,6 +172,20 @@
                                 The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth. "Fittest on Earth: A Decade of Fitness"
                                 follows the dramatic story of the top athletes who qualified and competed and offers an inside look at what it takes to be among the world's elite athletes,
                                 both in training and on the competition floor.
+                            </p>
+                            <div class="buttons">
+                                <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>
+                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus mr-1'></i>Add to List</button>
+                            </div>                       
+                        </figcaption>
+                    </figure>   
+                    <figure class="episode">
+                        <img src="/assets/img/minis/redeemed2.jpg" alt="">
+                        <figcaption class="episode-summary">
+                            <p>
+                                In 2017 the fittest athletes on Earth took on the unknown and unknowable during four of the most intense days of competition in CrossFit Games history. 
+                                "The Redeemed and the Dominant: Fittest on Earth " captures all the drama as top athletes resembling chiseled Grecian gods descend on Madison, 
+                                Wisconsin, to face a series of trials.
                             </p>
                             <div class="buttons">
                                 <button class='btn btn-trailer btn--sm mr-2'><i class='fas fa-play mr-1'></i>Play</button>

@@ -206,6 +206,11 @@
   color: var(--main-blue);
 }
 
+.details-actors {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
 @media (max-width: 500px) {
   #tab-1:checked ~ section .tab-section--1 {
     flex-direction: column;
