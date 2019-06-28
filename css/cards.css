@@ -70,7 +70,11 @@
 }
 
 .card-back span { font-weight: bold; }
-.card-back .buttons { align-self: flex-end; }
+.card-back .buttons { 
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
 .card-back iframe {
     opacity: 0;
     width: 100%;
@@ -80,7 +84,6 @@
 
 .card .rating, 
 .card-org .rating {
-    margin: 8px 0;
     color:  gold; 
 }
 
