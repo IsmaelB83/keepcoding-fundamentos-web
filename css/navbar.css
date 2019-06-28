@@ -30,7 +30,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
 }
 
 /* Logo */
@@ -212,6 +211,10 @@
     .navbar-item input { font-size: 1rem; }
     #toggler:checked ~ .navbar-list { transform: translateX(100%); }
     #toggler:checked ~ .navbar-brand--small { display: none; }
-    .navbar-toggler { display: inline-block; }
-    .account { right: 40px;}
+    .navbar-toggler { display: inline-block; right: 2.5%; }
+    .account { right: calc(2% + 45px); }
+}
+
+@media (min-width: 1050px) {
+    .navbar .container { position: relative; }
 }
