@@ -1,92 +1,21 @@
-/* Card style header-body */
+/********************************************
+ * CARD COMPONENT - used to display         * 
+ * media content. There are three types     *
+ *  - card (standard size rotable card)     *
+ *  - card-org (big size slide up card)     *
+ *  - card-epi (episode card)               *
+  *******************************************/
 .card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.card-header {
-    overflow: hidden;
-}
-
-.card-header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.card-body {
-    padding: 15px 20px;
-    background-color: #222;
-}
-
-.card-header--landscape {
-    height: 175px;
-}
-
-.features {
-    list-style: none;
-    font-size: 1.25rem;
-    line-height: 1.65rem;
-    letter-spacing: .6px;
-    margin-top: 10px;
-}
-
-.features-tick {
-    padding: 8px 0;
-    position: relative;
-}
-
-.features-tick p {
-    padding-left: 35px;
-}
-
-.features-tick span {
-    padding-left: 35px;
-    font-size: .9rem;
-    line-height: 1rem;
-    color: var(--main-light-grey);
-}
-
-.features-tick::before {
-    display: inline-block;
-    content: '✓';
-    position: absolute;
-    top: 5px;
-    font-size: 2rem;
-    line-height: 2rem;
-    background: -webkit-linear-gradient(var(--main-white), var(--main-blue-hover));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Card cover */
-.movie {
     position: relative;
     width: 100%;
     height: 225px;
     perspective: 150rem;
+    font-size: .9rem;
 }
 
-.movie h3 {
-    text-transform: uppercase;
-    letter-spacing: .1px;
-    font-family: 'Fugaz One', cursive;
-    font-size: 1.5rem;
-}
-
-.movie-lg h3 {
-    display: inline-block;
-    height: 50x;
-    display: flex;
-    align-items: center;
-}
-
-.movie-side {
+.card figure, 
+.card-org figure,
+.card-back {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,68 +26,8 @@
     border-radius: 10px;
 }
 
-.movie-side--front {
-    position: relative;
-}
-
-.movie-side--front h3 {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 4px;
-    margin: 10px;
-    padding: 3px 10px;
-}
-
-.movie-side--back {
-    transform: rotateY(-180deg);
-    background-color: rgba(255, 255, 255, .25);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 15px;
-    height: 100%;
-}
-
-.movie-side--back h3 {
-    font-size: 1.25rem;
-}
-
-.movie-side--back p {
-    font-size: .9rem;
-}
-
-
-.movie-side--back span {
-    font-size: .9rem;
-    font-weight: bold;
-}
-
-.movie-side--back .buttons {
-    margin-right: 0;
-    align-self: flex-end;
-}
-
-.movie-side--back iframe {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 1s ease;
-}
-
-.movie .rating {
-    margin: 5px 0;
-    color:  gold; 
-}
-
-.movie-caption {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.movie-content {
+.card figcaption,
+.card-org figcaption {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -171,31 +40,84 @@
     z-index: 1;
 }
 
-.movie-tags {
+.card figure:first-child { position: relative; }
+
+.card h3, 
+.card-org h3 {
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.25rem;
+}
+
+.card figcaption h3, 
+.card-org figcaption h3 {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px 10px;
+}
+
+.card-back {
+    transform: rotateY(-180deg);
+    background-color: rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    height: 100%;
+}
+
+.card-back span { font-weight: bold; }
+.card-back .buttons { align-self: flex-end; }
+.card-back iframe {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.card .rating, 
+.card-org .rating {
+    margin: 8px 0;
+    color:  gold; 
+}
+
+.card figure img,
+.card-org figure img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.card-tags {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.movie-alert {
+.card-alert {
     padding: 4px 10px;
     background-color: red;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.movie-age {
+.card-age {
     padding: 4px 10px;
     background-color: rgba(0, 0, 0, .5);
     color: var(--main-white);
     border-left: solid 3px var(--main-white);
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
-.movie-progress {
+.card-progress {
     position: absolute;
     bottom: -12px;
     margin-left: 50%;
@@ -205,17 +127,18 @@
     height: 3px;
 }
 
-.movie progress::-webkit-progress-value {
+.card progress::-webkit-progress-value {
     background-color: red;
 }  
 
-/* Movie card cover Large */
-.movie-lg {
-    height: 400px;
+.card-org {
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
-.movie-lg .movie-content {
+.card-org .card-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -228,18 +151,7 @@
     padding: 15px 0;
 }
 
-.movie-lg h3 {
-    padding: 5px 20px;
-    background-color: rgba(0, 0, 0, .4);
-    font-size: 1.75rem;
-}
-
-.movie-lg .movie-alert, .movie-lg .movie-age {
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-.movie-slide {
+.card-slide {
     height: 50%;
     width: 100%;
     transition: all .5s ease;
@@ -255,29 +167,10 @@
     z-index: 1;
 }
 
-.movie-slide span {
-    font-weight: 500;
-}
-
-.movie:hover .movie-lg + h3 {
-    color: rebeccapurple !important;
-}
-
-.movie:hover .movie-slide {
-    transform: translateY(0%);
-}
-
-.movie:hover .movie-side--front {
-    transform: rotateY(180deg);
-}
-
-.movie:hover .movie-side--back {
-    transform: rotateY(0);
-}
-
-.movie:hover .movie-side--back iframe {
-    opacity: 1;
-}
+.card-org:hover .card-slide { transform: translateY(0%); }
+.card:hover figure { transform: rotateY(180deg); }
+.card:hover .card-back { transform: rotateY(0); }
+.card:hover .card-back iframe { opacity: 1; }
 
 /* List de minis de películas */
 .movies {
@@ -287,9 +180,8 @@
 }
 
 .movies-title {
-    font-size: .9rem;
+    font-size: 1rem;
     margin-bottom: 10px;
-    cursor: pointer;
 }
 
 .movies-list {
@@ -299,11 +191,7 @@
     grid-gap: 30px;
 }
 
-.movies-list--lg {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-/* Episodio */
+/* Episode card */
 .episode {
     display: flex;
     flex-direction: row;
@@ -318,13 +206,8 @@
     margin-right: 20px;
 }
 
-.episode .buttons {
-    margin-top: 10px;
-}
-
-.episode-summary {
-    font-size: .95rem;
-}
+.episode .buttons { margin-top: 10px; }
+.episode-summary { font-size: .95rem; }
  
 @media (max-width: 500px) {
     .episode { flex-direction: column; }

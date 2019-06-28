@@ -28,29 +28,27 @@
             <h1 class='title'>Iniciar sesión</h1>
         </div>
         <aside class='login-info'>
-            <div class='card'>
-                <div class='card-body'>
-                    <h3 class='sub-title'>Bienvenido Crossbox© España</h3>
-                    <ul class='features'>
-                        <li class='features-tick'>
-                            <p>Primer mes gratis</p>
-                            <span>Después sólo 7,99€/mes.</span>
-                        </li>
-                        <li class='features-tick'><p>Sin compromiso: cancela cuando quieras.</p></li>
-                        <li class='features-tick'><p>2 reproducciones simultáneas.</p></li>
-                    </ul>
-                </div>
+            <div class='features'>
+                <h3 class='sub-title'>Bienvenido Crossbox© España</h3>
+                <ul class='features-list'>
+                    <li class='features-tick'>
+                        <p>Primer mes gratis</p>
+                        <span>Después sólo 7,99€/mes.</span>
+                    </li>
+                    <li class='features-tick'><p>Sin compromiso: cancela cuando quieras.</p></li>
+                    <li class='features-tick'><p>2 reproducciones simultáneas.</p></li>
+                </ul>
             </div>
         </aside>
         <form action='/' method='POST' class='login-form'>
             <div class="form-group">
                 <label for='mail' class='label label--light'>Correo electrónico</label>
-                <input type='email' name='mail' required placeholder=' ' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' class='input input--xl input--block input--light'>
+                <input type='email' name='mail' required placeholder=' ' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' class='input input--xl'>
                 <label for='mail' class='label label--help'>Email incorrecto. Revise el formato (xxx@yyy.zzz)</label>
             </div>
             <div class="form-group">
                 <label for='password' class='label label--light'>Contraseña</label>
-                <input type='password' name='password' required placeholder=' ' class='input input--xl input--block input--light'>
+                <input type='password' name='password' required placeholder=' ' class='input input--xl'>
             </div>
             <div class="form-group my-2">
                 <input type='checkbox' name='recordar' id='recordar' class='form-checkbox'>

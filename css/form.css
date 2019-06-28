@@ -5,7 +5,7 @@
   position: relative;
 }
 
-/* Input */
+/* Input field */
 .input {
   border: none;
   border-radius: 2px;
@@ -13,42 +13,28 @@
   font-size: 1rem;
   letter-spacing: .5px;
   line-height: 1.5rem;
-}
-
-.input--block {
   width: 100%;
 }
 
-/* :not(:placeholder-shown) -> hack para controlar que el input NO esté vacio (para hacer el aviso más amigable con el usuario)
-Sólo se muestra el aviso cuando el input NO está vacio, y además NO tiene el foco. Este control se podría mejorar con Javascript
-*/
+/* :not(:placeholder-shown) -> hack to control wether the input field is empty or not. The style will apply only in case the 
+   content doesn't fulfill the validation, and the input is already filled with data (otherwise the "error" style doesn't apply) */
 .input:not(:placeholder-shown).input:invalid.input:not(:focus) {
   color: var(--main-red);
   border: 1px solid var(--main-red);
 }
 
-/* Idem que lo anterior, pero además muestro el pseudoelemento after de label de ayuda. Que coloca un signo de exclamación en el propio
-input mediante posicionamiento absoluto */
 .input:not(:placeholder-shown).input:invalid.input:not(:focus) ~ .label--help {
   display: block;
 }
 
-.input--light {
-  background-color: var(--main-light-grey);
-  color: black;
-  border: none;
-}
-
 /* Label */
 .label {
-  align-self: flex-start;
   font-size: .75rem;
   font-weight: 500;
-  text-transform: capitalize;
 }
 
 .label--lg {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
 }
 

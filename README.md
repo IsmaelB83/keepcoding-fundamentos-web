@@ -24,5 +24,7 @@ utilizando HTML y CSS.
 > Tarjetas tipo giratorias en las listas de series y películas disponibles
 ### Cards con efecto slide up al hacer hover sobre ellas (index.html)
 > Tarjetas del tipo "cortinilla" en las que al hacer hover sobre ellas, se muestra información adicional con una capa superpuesta que sube hasta posicionarse sobre la tarjeta
-### Reproductor multimedia mejorado (index.html y detail.html - pending )
-> He creado un reproductor multimedia mejorado para previsualizar el trailer de una serie o películas
+### Navbar responsive con el checkbox hack (index.html y detail.html)
+> Utilizando un checkbox a modo de toggler, y capas css se consigue un menu de navegación responsive
+### Tab panel con el hack del radiobutton (detail.html)
+> Para evitar el uso de JS, he utilizado radiobuttons y estilos css para crear el panel de "pestañas" de la sección detail.

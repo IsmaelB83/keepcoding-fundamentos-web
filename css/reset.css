@@ -31,23 +31,24 @@ img, embed, object, video { max-width: 100%; }
     --main-red: #ff4136;
     --main-white: #fafafa;
     /* Size */
-    --navbar-height: 65px;
+    --navbar-height: 4rem;
 }
 
 /* General styles */
-body { background-color: black; }
-.text-center { text-align: center !important; }
-.text-left { text-align: left !important; }
-.text-right { text-align: right !important; }
-.bold { font-weight: bold !important; }
-.d-hidden { visibility: hidden !important; }
+body { background-color: black;  }
 .container { 
     margin: 0 auto;
     width: 93%;
     max-width: 1400px;
 };
 
-/* Margins (they are "important" on purpose: in order to overwrite any margin style of the element where it is applied) */
+/* Following classes are all important on purpose. The idea is that when they are applied, they should overwrite the related property of the element where they are applied */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.bold { font-weight: bold !important; }
+.d-hidden { visibility: hidden !important; }
+
 .m-0 { margin: 0 !important; }
 .m-1 { margin: 10px !important; }
 .m-2 { margin: 15px !important; }
@@ -84,7 +85,6 @@ body { background-color: black; }
 .my-3 { margin-top: 20px !important; margin-bottom: 20px !important; }
 .my-4 { margin-top: 30px !important; margin-bottom: 30px !important; }
 
-/* Margins (they are "important" on purpose: in order to overwrite any padding style of the element where it is applied) */
 .p-0 { padding: 0 !important; }
 .p-1 { padding: 10px !important; }
 .p-2 { padding: 15px !important; }

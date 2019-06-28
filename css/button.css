@@ -1,4 +1,4 @@
-/* 0) Standard button */
+/* 0) STANDARD BUTTON STYLE */
 .btn {
     background-color: transparent;
     border: none;
@@ -13,25 +13,6 @@
 .btn:focus { outline:0; }
 .btn:hover  { transform: translateY(-1px); }
 .btn:active { transform: translateY(0); }
-
-.btn--xl {
-    width: 250px;
-    font-size: 1.25rem;
-    padding: 10px 15px;
-}
-
-.btn--lg {
-    font-size: 1.1rem;
-    padding: 10px 15px;
-}
-
-.btn--sm {
-    font-size: .9rem;
-    padding: 8px 8px;
-}
-
-.btn--fill { width: 100%; }
-.btn--white { color: white; }
 
 /*1) OUTLINE */
 .btn-outline {
@@ -71,3 +52,10 @@
     color: black;
     transform: scale(1.1,1.05) translateY(-1px);
 }
+
+/* Modifiers */
+.btn--xl { padding: .75rem 3rem; }
+.btn--lg { padding: .75rem 1rem; }
+.btn--sm { padding: .5rem .5rem; }
+.btn--fill { width: 100%; }
+.btn--white { color: white; }

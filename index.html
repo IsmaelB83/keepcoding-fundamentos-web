@@ -19,6 +19,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/hero.css'>
 </head>
 <body>
+
     <!-- Header with navbar -->
     <header>
         <nav class='navbar'>
@@ -64,8 +65,9 @@
             </div>
         </nav>
     </header>
+
     <!-- Trailer hero panel (specifiic premiere selected for current user will displayed here) -->
-    <aside class='hero hero--border'>
+    <aside class='hero'>
         <div class='hero-wrapper'>
             <video autoplay muted id='trailer'>
                 <source src='/assets/video/trailer.mp4' type='video/mp4'>
@@ -84,24 +86,25 @@
             <span class='agerating'>16 +</span>
         </div>
     </aside>
+
     <!-- Main panel with lists -->
     <main class='container main-wrapper'>
         <section id='mylist' class='row movies mt-3'>
             <h2 class='movies-title'>Seguir viendo</h2>
             <div class='movies-list'>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/froning.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/froning.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Froning: The Fittest Man in History</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Estreno!</span>
-                                <span class='movie-age d-hidden'></span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Estreno!</span>
+                                <span class='card-age d-hidden'></span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='40' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='40' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Froning: The Fittest Man in History</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -119,19 +122,19 @@
                         </div>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/everysecond.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/everysecond.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Every Second Counts: 2008 CrossFit Games</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert d-hidden'></span>
-                                <span class='movie-age'>+13</span>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'></span>
+                                <span class='card-age'>+13</span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='64' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='64' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Every Second Counts: 2008 CrossFit Games</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -149,19 +152,19 @@
                         </div>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/mat.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/mat.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Mat Fraser unbeatable</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert d-hidden'></span>
-                                <span class='movie-age d-hidden'></span>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'></span>
+                                <span class='card-age d-hidden'></span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='95' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='95' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Mat Fraser unbeatable</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -179,19 +182,19 @@
                         </div>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/business.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/business.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>The Business behind the sport</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Last season</span>
-                                <span class='movie-age'>+9</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Last season</span>
+                                <span class='card-age'>+9</span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='12' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='12' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>The Business behind the sport</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -209,19 +212,19 @@
                         </div>
                     </div>
                 </article>    
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/redeemed.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/redeemed.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Redeemed and the dominant</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Novedad</span>
-                                <span class='movie-age d-hidden'></span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Novedad</span>
+                                <span class='card-age d-hidden'></span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='63' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='63' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Redeemed and the dominant</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -239,19 +242,19 @@
                         </div>
                     </div>
                 </article>    
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/lifttheworld.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/lifttheworld.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Lift the world</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Temporada 5</span>
-                                <span class='movie-age'>+16</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Temporada 5</span>
+                                <span class='card-age'>+16</span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='75' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='75' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Lift the world</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -269,19 +272,19 @@
                         </div>
                     </div>
                 </article>    
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/ultrarunners.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/ultrarunners.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Ultrarunners</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Temporada 2</span>
-                                <span class='movie-age'>+13</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Temporada 2</span>
+                                <span class='card-age'>+13</span>
                             </div>
-                        </div>
-                        <progress class='movie-progress' value='52' max='100'></progress>
-                    </div>
-                    <div class='movie-side movie-side--back'>
+                        </figcaption>
+                        <progress class='card-progress' value='52' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
                         <h3>Ultrarunners</h3>
                         <div class='rating'>
                             <i class='fas fa-star'></i>
@@ -299,214 +302,222 @@
                         </div>
                     </div>
                 </article>
-                <article class='movie'>
-                        <div class='movie-side movie-side--front'>
-                            <img class='movie-caption' src='/assets/img/minis/klokov.jpg' alt=''>
-                            <div class='movie-content'>
-                                <h3>Klokov-nator</h3>
-                                <div class='movie-tags'>
-                                    <span class='movie-alert'>Película</span>
-                                    <span class='movie-age'>+13</span>
-                                </div>
-                            </div>
-                            <progress class='movie-progress' value='5' max='100'></progress>
-                        </div>
-                        <div class='movie-side movie-side--back'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/klokov.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Klokov-nator</h3>
-                            <div class='rating'>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star-half-alt'></i>
-                                <i class='far fa-star'></i>
-                            </div>       
-                            <p><span>Año</span>: 2022</p>
-                            <p><span>Calificación:</span> TP</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
-                            <div class='buttons'>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Película</span>
+                                <span class='card-age'>+13</span>
                             </div>
+                        </figcaption>
+                        <progress class='card-progress' value='5' max='100'></progress>
+                    </figure>
+                    <div class='card-back'>
+                        <h3>Klokov-nator</h3>
+                        <div class='rating'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star-half-alt'></i>
+                            <i class='far fa-star'></i>
+                        </div>       
+                        <p><span>Año</span>: 2022</p>
+                        <p><span>Calificación:</span> TP</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore repellendus tempore?</p>
+                        <div class='buttons'>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
                         </div>
-                    </article> 
+                    </div>
+                </article>
             </div>
         </section>
         <section id='originals' class='row movies mt-4'>
             <h2 class='movies-title'>Originales Crossbox©</h2>
-            <div class='movies-list movies-list--lg'>
-                <article class='movie movie-lg'>
-                    <img class='movie-caption' src='/assets/img/minis/fittest.jpg' alt=''>
-                    <div class='movie-content'>
-                        <h3>The fittest on earth: a decade on fitness</h3>
-                        <div class='movie-tags'>
-                            <span class='movie-alert'>Trending</span>
-                            <span class='movie-age'>TP</span>
-                        </div>
-                    </div>
-                    <div class='movie-slide'>
-                        <div class='rating'>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star-half-alt'></i>
-                        </div>
-                        <p><span>Año</span>: 2017</p>
-                        <p>The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth.</p>
-                        <div class='buttons'>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
+            <div class='movies-list movies-list--original'>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/assets/img/minis/fittest.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>The fittest on earth: a decade on fitness</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Trending</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star-half-alt'></i>
+                                </div>
+                                <p><span>Año</span>: 2017</p>
+                                <p>The 2016 Reebok CrossFit Games were a grueling five-day, 15-event test to find the fittest man and woman on Earth.</p>
+                                <div class='buttons'>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </article>
-                <article class='movie movie-lg'>
-                    <img class='movie-caption' src='/assets/img/minis/redeemed.jpg' alt=''>
-                    <div class='movie-content'>
-                        <h3>The redeemed and the dominant</h3>
-                        <div class='movie-tags'>
-                            <span class='movie-alert'>Estreno!</span>
-                            <span class='movie-age'>TP</span>
-                        </div>
-                    </div>   
-                    <div class='movie-slide'>
-                        <div class='rating'>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='far fa-star'></i>
-                        </div>
-                        <p><span>Año</span>: 2019</p>
-                        <p>In 2017 the fittest athletes on Earth took on the unknown and unknowable during four of the most intense days of competition in CrossFit Games history.</p>
-                        <div class='buttons'>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/assets/img/minis/redeemed.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>The redeemed and the dominant</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Estreno!</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='far fa-star'></i>
+                                </div>
+                                <p><span>Año</span>: 2019</p>
+                                <p>In 2017 the fittest athletes on Earth took on the unknown and unknowable during four of the most intense days of competition in CrossFit Games history.</p>
+                                <div class='buttons'>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </article>
-                <article class='movie movie-lg'>
-                    <img class='movie-caption' src='/assets/img/minis/froning.jpg' alt=''>
-                    <div class='movie-content'>
-                        <h3>Froning: The fittest man in history</h3>
-                        <div class='movie-tags'>
-                            <span class='movie-alert'>Trending</span>
-                            <span class='movie-age'>TP</span>
-                        </div>
-                    </div>       
-                    <div class='movie-slide'>
-                        <div class='rating'>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                        </div>   
-                        <p><span>Año</span>: 2015</p>
-                        <p>
-                            Rich Froning Jr. is a legend in CrossFit and the Sport of Fitness. In this biopic, take a look at his childhood, follow his quest
-                            for a fourth CrossFit Games title, and see him as a son, a husband and a new father.
-                        </p>
-                        <div class='buttons'>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/assets/img/minis/froning.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Froning: The fittest man in history</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Trending</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                            <div class='rating'>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                            </div>   
+                            <p><span>Año</span>: 2015</p>
+                            <p>
+                                Rich Froning Jr. is a legend in CrossFit and the Sport of Fitness. In this biopic, take a look at his childhood, follow his quest
+                                for a fourth CrossFit Games title, and see him as a son, a husband and a new father.
+                            </p>
+                            <div class='buttons'>
+                                <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                                <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </article>
-                <article class='movie movie-lg'>
-                    <img class='movie-caption' src='/assets/img/minis/alexander.jpg' alt=''>
-                    <div class='movie-content'>
-                        <h3>Road to Games 2019: Alexander Anasagasti</h3>
-                        <div class='movie-tags'>
-                            <span class='movie-alert d-hidden'>Estreno!</span>
-                            <span class='movie-age'>TP</span>
-                        </div>
-                    </div>   
-                    <div class='movie-slide'>
-                        <div class='rating'>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star'></i>
-                            <i class='fas fa-star-half-alt'></i>
-                            <i class='far fa-star'></i>
-                            <i class='far fa-star'></i>
-                        </div>   
-                        <p><span>Año</span>: 2019</p>
-                        <p>
-                            Youtube documentary by Anabel Avila about the road to games of this Spanish Athlete. 
-                        </p>
-                        <div class='buttons'>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
-                            <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
-                        </div>
-                    </div>
+                <article class='card-org'>
+                    <figure>
+                        <img src='/assets/img/minis/alexander.jpg' alt=''>
+                        <figcaption class='card-content'>
+                            <h3>Road to Games 2019: Alexander Anasagasti</h3>
+                            <div class='card-tags'>
+                                <span class='card-alert d-hidden'>Estreno!</span>
+                                <span class='card-age'>TP</span>
+                            </div>
+                            <div class='card-slide'>
+                                <div class='rating'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star-half-alt'></i>
+                                    <i class='far fa-star'></i>
+                                    <i class='far fa-star'></i>
+                                </div>   
+                                <p><span>Año</span>: 2019</p>
+                                <p>
+                                    Youtube documentary by Anabel Avila about the road to games of this Spanish Athlete. 
+                                </p>
+                                <div class='buttons'>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-play'></i></button>
+                                    <button class='btn btn-trailer btn--sm'><i class='fas fa-plus'></i></button>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </article>
             </div>
         </section>
         <section id='motivational' class='row movies mt-4'>
             <h2 class='movies-title'>Videos de Motivación</h2>
             <div class='movies-list'>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/motivation_1.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/motivation_1.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>This is my year</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>3'02'</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Hover to play!</span>
+                                <span class='card-age'>3'02'</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class='movie-side movie-side--back p-0'>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back p-0'>
                         <iframe src='https://www.youtube.com/embed/YKgoJKzFKUI' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/motivation_2.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/motivation_2.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Champion</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>4'18'</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Hover to play!</span>
+                                <span class='card-age'>4'18'</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class='movie-side movie-side--back p-0'>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back p-0'>
                         <iframe src='https://www.youtube.com/embed/fZjrJT9Ot0s' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/motivation_3.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/motivation_3.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>Hero</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>3'43'</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Hover to play!</span>
+                                <span class='card-age'>3'43'</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class='movie-side movie-side--back p-0'>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back p-0'>
                         <iframe src='https://www.youtube.com/embed/qDlZdLhJgME' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>
-                <article class='movie'>
-                    <div class='movie-side movie-side--front'>
-                        <img class='movie-caption' src='/assets/img/minis/motivation_4.jpg' alt=''>
-                        <div class='movie-content'>
+                <article class='card'>
+                    <figure>
+                        <img src='/assets/img/minis/motivation_4.jpg' alt=''>
+                        <figcaption class='card-content'>
                             <h3>MURPH Wod</h3>
-                            <div class='movie-tags'>
-                                <span class='movie-alert'>Hover to play!</span>
-                                <span class='movie-age'>2'59'</span>
+                            <div class='card-tags'>
+                                <span class='card-alert'>Hover to play!</span>
+                                <span class='card-age'>2'59'</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class='movie-side movie-side--back p-0'>
+                        </figcaption>
+                    </figure>
+                    <div class='card-back p-0'>
                         <iframe src='https://www.youtube.com/embed/GS5_87I8RDI' frameborder='0' allowfullscreen></iframe>
                     </div>
                 </article>            
             </div>
         </section>
     </main>
+
     <!-- Footer with social media icons -->
     <footer>
         <div class='footer-content'>
