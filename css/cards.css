@@ -9,6 +9,7 @@
     position: relative;
     width: 100%;
     height: 225px;
+    -webkit-perspective: 150rem;
     perspective: 150rem;
     font-size: .9rem;
 }
@@ -21,16 +22,26 @@
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transition: all .8s ease;
     transition: all .8s ease;
     border-radius: 10px;
 }
 
 .card figcaption,
 .card-org figcaption {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     position: absolute;
     top: 0;
@@ -59,11 +70,21 @@
 }
 
 .card-back {
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
     background-color: rgba(255, 255, 255, .25);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 15px;
     height: 100%;
@@ -79,6 +100,7 @@
     opacity: 0;
     width: 100%;
     height: 100%;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
 
@@ -91,14 +113,23 @@
 .card-org figure img {
     width: 100%;
     height: 100%;
+    -o-object-position: center;
     object-position: center;
+    -o-object-fit: cover;
     object-fit: cover;
     z-index: 0;
 }
 
 .card-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
 }
@@ -124,6 +155,7 @@
     position: absolute;
     bottom: -12px;
     margin-left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     border: none;
     background-color: red;
@@ -147,9 +179,18 @@
     left: 0;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 15px 0;
 }
@@ -157,27 +198,49 @@
 .card-slide {
     height: 50%;
     width: 100%;
+    -webkit-transition: all .5s ease;
     transition: all .5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 10px;
     background-color: rgba(0, 0, 0, .6);
     bottom: 0;
     left: 0;
     position: absolute;
+    -webkit-transform: translateY(100%);
     transform: translateY(100%);
     z-index: 1;
 }
 
-.card-org:hover .card-slide { transform: translateY(0%); }
-.card:hover figure { transform: rotateY(180deg); }
-.card:hover .card-back { transform: rotateY(0); }
+.card-org:hover .card-slide { 
+    -webkit-transform: translateY(0%); 
+    transform: translateY(0%); 
+}
+.card:hover figure { 
+    -webkit-transform: rotateY(180deg); 
+    transform: rotateY(180deg); 
+}
+.card:hover .card-back { 
+    -webkit-transform: rotateY(0); 
+    transform: rotateY(0); 
+}
 .card:hover .card-back iframe { opacity: 1; }
 
 /* List de minis de películas */
 .movies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 20px;
 }
@@ -196,9 +259,18 @@
 
 /* Episode card */
 .episode {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -213,7 +285,12 @@
 .episode-summary { font-size: .95rem; }
  
 @media (max-width: 500px) {
-    .episode { flex-direction: column; }
+    .episode { 
+        -webkit-box-orient: vertical; 
+        -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+        flex-direction: column; 
+    }
     .episode img { margin-bottom: 15px; }
     .episode .buttons { margin-top: 5px; }  
 }

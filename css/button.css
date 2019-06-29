@@ -3,6 +3,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    -webkit-transition: all .15s ease;
     transition: all .15s ease;
     display: inline-block;
     font-weight: 300;
@@ -11,8 +12,14 @@
 }
 
 .btn:focus { outline:0; }
-.btn:hover  { transform: translateY(-1px); }
-.btn:active { transform: translateY(0); }
+.btn:hover  { 
+    -webkit-transform: translateY(-1px); 
+    transform: translateY(-1px); 
+}
+.btn:active { 
+    -webkit-transform: translateY(0); 
+    transform: translateY(0); 
+}
 
 /*1) OUTLINE */
 .btn-outline {
@@ -50,6 +57,7 @@
 .btn-trailer:hover {
     background-color: var(--main-white);
     color: black;
+    -webkit-transform: scale(1.1,1.05) translateY(-1px);
     transform: scale(1.1,1.05) translateY(-1px);
 }
 
