@@ -28,6 +28,12 @@ body {
 };
 
 /* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .header-login {
     padding: 25px 10px;
     text-align: center;
