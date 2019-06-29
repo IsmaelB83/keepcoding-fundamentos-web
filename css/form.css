@@ -146,9 +146,8 @@ content doesn't fulfill the validation, and the input is already filled with dat
 	padding-bottom: 20px;
 }
 
-.tab-section iframe {
+.tab-section video {
 	width: 100%;
-	max-width: 900px;
 	height: 500px;
 }
 
