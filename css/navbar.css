@@ -261,7 +261,7 @@
         transition: all .3s ease;
         padding: 20px;
     }
-    
+   
     .navbar-item.navbar-brand { display: block; }
     .navbar-brand--small { display: block; }
     .navbar-item .navbar-brand { margin-bottom: 50px; }
@@ -301,4 +301,9 @@
 
 @media (min-width: 1050px) {
     .navbar .container { position: relative; }
+}
+
+@media (max-height: 600px) and (orientation:landscape) {
+    .navbar-item .navbar-brand { margin-bottom: 30px; }
+    .navbar-list .navbar-item { margin-bottom: 30px; }
 }
