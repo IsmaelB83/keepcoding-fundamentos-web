@@ -16,8 +16,6 @@ utilizando HTML y CSS.
 ### Input de tipo mail con validación (login.html)
 > Se añade interactividad con el usuario, mostrando avisos de error que aparecen cuando se detecta que el contenido del input es incorrecto.
 > El mensaje de error sólo se muestra cuando el usuario 'quita' el foco del campo email, una vez haya introducido un valor incorrecto.
-### Campo de búsqueda dinámico (index.html)
-> Se despliega el campo de búsqueda cuando hacemos foco/click sobre el botón de búsqueda.
 ### Dropdown de cuenta de usuario (index.html y detail.html) 
 > En la página de index.html y detail.html he creado un menú tipo dropdown únicamente utiliando css, selectores combinados y la pseudoclase hover.
 ### Cards giratorias al hacer hover sobre ellas (index.html)
