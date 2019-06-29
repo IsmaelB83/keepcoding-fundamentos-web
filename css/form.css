@@ -141,6 +141,11 @@ content doesn't fulfill the validation, and the input is already filled with dat
 	text-align: justify;
 }
 
+.sinopsis-text {
+	border-bottom: 1px solid var(--main-light-grey);
+	padding-bottom: 20px;
+}
+
 .tab-section iframe {
 	width: 100%;
 	max-width: 900px;
@@ -251,4 +256,59 @@ content doesn't fulfill the validation, and the input is already filled with dat
 	.tab-section .sinopsis { margin-left: 0; }
 	.tab-section .details p { margin-bottom: 5px; }
 	.tab-label { padding: 10px 15px; }  
+}
+
+.comments { 
+	max-width: 600px;
+	text-align: left;
+	padding: 20px;
+}
+
+.comment {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	margin-top: 15px;
+}
+
+.comment img {
+	width: 36px;
+	border-radius: 5px;
+}
+
+.comment-body {
+	margin-left: 10px;
+	font-size: .9rem;
+}
+
+.comment-name a {
+	color: var(--main-white);
+	font-weight: 500;
+	margin-right: 5px;
+}
+
+.comment-name i{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: rgb(238, 170, 93);
+}
+
+.comment-name span {
+	text-transform: lowercase;
+	font-size: .9em;
+	font-weight: 300;
+}
+
+.comment-text {
+	margin-top: 7px;
 }
