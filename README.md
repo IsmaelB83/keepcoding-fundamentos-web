@@ -27,7 +27,7 @@ user@system:~/downloads$ git clone https://github.com/IsmaelB83/keepcoding-funda
 
 Run the application (you need to have browser-sync for this option):
 ```console
-user@system:~/downloads$ git cd keepcoding-fundamentos-web
+user@system:~/downloads$ cd keepcoding-fundamentos-web
 user@system:~/downloads/keepcoding-fundamentos-web/$ browser-sync ./
 ```
 
