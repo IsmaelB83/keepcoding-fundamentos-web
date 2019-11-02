@@ -1,28 +1,46 @@
-# Practica Fundamentos
-Practica del módulo de fundamentos del Bootcamp Web Fullstack VII de Keepcoding
+# CONTENTS
+- [Introduction](#Introduction)
+- [Main Effects](#Main-effects)
+- [Download](#Download)
+- [Screenshoots](#SCREENSHOTS)
 
-Nuestro objetivo es construir la estructura web de una plataforma de streaming de contenido
-digital al estilo de Netflix o HBO para distribuir series y películas a cualquier dispositivo
-conectado a internet que disponga de un navegador web moderno. Nuestro público es de
-diferentes edades y condiciones y queremos que dispongan de la mejor experiencia de
-usuario independientemente del tamaño de su pantalla.
+## INTRODUCTION
+Project done for the module of "Web Fundamentals" of the Fullstack Web Development from KeepCoding Bootcamp.
 
-No se puede utilizar ninguna libreria externa de CSS ni JS. La web debe implementarse por completo
-utilizando HTML y CSS.
+The goal of this project is to build a frontend for a streaming platform web (similar to Netflix, HBO, etc.). But we can use only pure HTML and CSS. No Javascript is allowed in this project. Moreover the platform should performe well in desktop as well as mobile (responsive design)
 
-## Algunos efectos interesantes que he conseguido con CSS puro, sin sentencias JS:
-### Checkbox hack (login.html)
-> He creado un checkbox, rediseñando por completo el estándar de HTML. Tiene un efecto de transición del color de fondo cuando lo pulsas.
-### Input de tipo mail con validación (login.html)
-> Se añade interactividad con el usuario, mostrando avisos de error que aparecen cuando se detecta que el contenido del input es incorrecto.
-> El mensaje de error sólo se muestra cuando el usuario 'quita' el foco del campo email, una vez haya introducido un valor incorrecto.
-### Dropdown de cuenta de usuario (index.html y detail.html) 
-> En la página de index.html y detail.html he creado un menú tipo dropdown únicamente utiliando css, selectores combinados y la pseudoclase hover.
-### Cards giratorias al hacer hover sobre ellas (index.html)
-> Tarjetas tipo giratorias en las listas de series y películas disponibles
-### Cards con efecto slide up al hacer hover sobre ellas (index.html)
-> Tarjetas del tipo "cortinilla" en las que al hacer hover sobre ellas, se muestra información adicional con una capa superpuesta que sube hasta posicionarse sobre la tarjeta
-### Navbar responsive con el checkbox hack (index.html y detail.html)
-> Utilizando un checkbox a modo de toggler, y capas css se consigue un menu de navegación responsive
-### Tab panel con el hack del radiobutton (detail.html)
-> Para evitar el uso de JS, he utilizado radiobuttons y estilos css para crear el panel de "pestañas" de la sección detail.
+## MAIN EFFECTS
+
+> **Checkbox Hack:** Redefined checkbox with transition and custom images.
+> **Input fields with data validation:** using html and css we can perform/show the user some cool data validations. Used in email field in the login area.
+> **Dropdown in user area:** dropdown menu attachd to the user area (menubar). Using just css, combined selectors and pseudoclass hover.ase hover.
+> **Cards with animations:** diferent types cards to show media content. With hover effects such as flip sides, slide up, etc.
+> **Navbar responsive:** using the checkbox as toogler and css, i have created a responsive navbar
+> **Tab panel:** a cool tab panel (in detail section), just using css and html (radiobutton hack)
+
+## DOWNLOAD
+
+Clone the repository:
+```console
+user@system:~/downloads$ git clone https://github.com/IsmaelB83/keepcoding-fundamentos-web
+```
+
+Run the application (you need to have browser-sync for this option):
+```console
+user@system:~/downloads$ git cd keepcoding-fundamentos-web
+user@system:~/downloads/keepcoding-fundamentos-web/$ browser-sync ./
+```
+
+## SCREENSHOTS
+
+### Login
+
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/login.jpg).
+
+### Index
+
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/index.jpg).
+
+### Detail
+
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/detail.jpg).
