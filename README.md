@@ -11,12 +11,12 @@ The goal of this project is to build a frontend for a streaming platform web (si
 
 ## MAIN EFFECTS
 
-> **Checkbox Hack:** Redefined checkbox with transition and custom images.
-> **Input fields with data validation:** using html and css we can perform/show the user some cool data validations. Used in email field in the login area.
-> **Dropdown in user area:** dropdown menu attachd to the user area (menubar). Using just css, combined selectors and pseudoclass hover.ase hover.
-> **Cards with animations:** diferent types cards to show media content. With hover effects such as flip sides, slide up, etc.
-> **Navbar responsive:** using the checkbox as toogler and css, i have created a responsive navbar
-> **Tab panel:** a cool tab panel (in detail section), just using css and html (radiobutton hack)
+**Checkbox Hack:** Redefined checkbox with transition and custom images.
+**Input fields with data validation:** using html and css we can perform/show the user some cool data validations. Used in email field in the login area.
+**Dropdown in user area:** dropdown menu attachd to the user area (menubar). Using just css, combined selectors and pseudoclass hover.ase hover.
+**Cards with animations:** diferent types cards to show media content. With hover effects such as flip sides, slide up, etc.
+**Navbar responsive:** using the checkbox as toogler and css, i have created a responsive navbar
+**Tab panel:** a cool tab panel (in detail section), just using css and html (radiobutton hack)
 
 ## DOWNLOAD
 
@@ -35,12 +35,12 @@ user@system:~/downloads/keepcoding-fundamentos-web/$ browser-sync ./
 
 ### Login
 
-![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/login.jpg).
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/master/assets/img/readme/login.jpg).
 
 ### Index
 
-![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/index.jpg).
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/master/assets/img/readme/index.jpg).
 
 ### Detail
 
-![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/assets/img/readme/detail.jpg).
+![alt text](https://raw.githubusercontent.com/IsmaelB83/keepcoding-fundamentos-web/master/assets/img/readme/detail.jpg).
